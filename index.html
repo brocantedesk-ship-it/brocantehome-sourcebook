@@ -1,0 +1,2410 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>BrocanteHome Sourcebook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A daily sourcebook of housekeeping references, sanctuary resources, midlife reading, books, films and curiosities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,500;1,700&display=swap">
+<style>
+/* Layout: a single-column Saturday broadsheet. Masthead, dateline, search, then issue pages ruled in double lines.
+   The one bold move is the red-pencil margin note. Everything else stays quiet ink on newsprint. */
+:root{
+  --paper:#F8EFE6; --paper-2:#F0E2D6; --ink:#2B1F26; --muted:#6B5A62;
+  --rose:#9A4960; --mauve:#6D5177; --btn-fg:#FBF5EE; --pencil:#C0392B;
+  --rule:#D8C4B8; --mark:#F1CFD7; --dust:#897987;
+  --f-display:'Playfair Display',Georgia,'Times New Roman',serif;
+  --f-body:'EB Garamond',Georgia,'Times New Roman',serif;
+  --f-hand:'Caveat','Bradley Hand','Segoe Script',cursive;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1D1519; --paper-2:#261C21; --ink:#F1E6DC; --muted:#B5A2AA;
+    --rose:#E096AB; --mauve:#BCA0C6; --btn-fg:#1D1519; --pencil:#F2705E;
+    --rule:#473840; --mark:#5A3441; --dust:#897987; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1D1519; --paper-2:#261C21; --ink:#F1E6DC; --muted:#B5A2AA;
+  --rose:#E096AB; --mauve:#BCA0C6; --btn-fg:#1D1519; --pencil:#F2705E;
+  --rule:#473840; --mark:#5A3441; --dust:#897987; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font:400 1.15rem/1.55 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 3rem;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:2px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+
+/* masthead */
+.masthead{padding-top:1.4rem;text-align:center}
+.strap{font-size:.88rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.title{font:900 clamp(2.5rem,9vw,5.6rem)/.98 var(--f-display);letter-spacing:-.015em;margin:.5rem 0 .2rem}
+.title .the{display:block;font:italic 500 clamp(1.1rem,3vw,1.6rem)/1 var(--f-display);letter-spacing:0;color:var(--rose);margin-bottom:.35rem}
+.title-link{color:inherit;text-decoration:none;display:block}
+.title-link:hover .the,.title-link:focus-visible .the{color:var(--ink)}
+.sub{display:flex;align-items:center;justify-content:center;gap:.9rem;color:var(--rose)}
+.sub b{font:700 .95rem/1 var(--f-body);letter-spacing:.34em;text-transform:uppercase;color:var(--ink);padding-left:.34em}
+.sprig{width:min(120px,22vw);height:24px;flex:none;color:var(--dust)}
+.sprig.flip{transform:scaleX(-1)}
+.lede{max-width:46ch;margin:.8rem auto 0;color:var(--muted);font-style:italic}
+.dateline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.2rem 1rem;margin-top:1.1rem;padding:.5rem 0;border-top:3px double var(--dust);border-bottom:1px solid var(--dust);font-size:.88rem;letter-spacing:.14em;text-transform:uppercase}
+.dateline span:nth-child(2){font-weight:700}
+@media (max-width:640px){.dateline{justify-content:center;text-align:center}}
+
+/* nav + search */
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.5rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.nav{display:flex;flex-wrap:wrap;gap:.2rem 1.4rem}
+.nav a{font:700 .88rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:.5rem 0;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--rose)}
+.nav a[aria-current="page"]{border-bottom-color:var(--rose);color:var(--rose)}
+.find{display:flex;align-items:center;gap:.5rem;flex:1 1 15rem;max-width:26rem;border-bottom:1.5px solid var(--ink);padding:.15rem .1rem}
+.find svg{width:1.05rem;height:1.05rem;flex:none;color:var(--rose)}
+.find input{flex:1;min-width:0;background:transparent;border:0;color:var(--ink);font:italic 400 1.1rem/1.4 var(--f-body);padding:.25rem 0}
+.find input::placeholder{color:var(--muted)}
+.find input:focus{outline:none}
+.find:focus-within{border-bottom-color:var(--rose)}
+
+main{padding-top:1.6rem;min-height:50vh}
+.notice{background:var(--paper-2);padding:.7rem 1rem;margin-bottom:1.4rem;font-style:italic}
+
+/* issue header */
+.ihead{text-align:center;padding:.4rem 0 1.4rem}
+.ihead .no{font-size:.88rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:700}
+.ihead h1{font:800 clamp(2rem,6vw,3.4rem)/1.05 var(--f-display);margin:.4rem 0}
+.ihead .kick{font-style:italic;color:var(--muted);font-size:1.2rem;max-width:44ch;margin:0 auto}
+
+/* letter + index */
+.front{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:2rem 3rem;padding:1.4rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--dust)}
+@media (max-width:820px){.front{grid-template-columns:minmax(0,1fr)}}
+.label{font:700 .85rem/1.2 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:.7rem}
+.letter p+p{margin-top:.9rem}
+.letter p:first-of-type::first-letter{font:800 3.6em/.8 var(--f-display);float:left;padding:.08em .1em 0 0;color:var(--rose)}
+.letter{max-width:62ch}
+.index ul{list-style:none;margin:0;padding:0}
+.index li{border-top:1px solid var(--rule)}
+.index li:last-child{border-bottom:1px solid var(--rule)}
+.index button{all:unset;box-sizing:border-box;display:flex;justify-content:space-between;gap:1rem;width:100%;padding:.55rem 0;cursor:pointer;font-family:var(--f-display);font-style:italic;font-size:1.08rem}
+.index button:hover{color:var(--rose)}
+.index button:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.index .n{font-family:var(--f-body);font-style:normal;font-variant-numeric:tabular-nums;color:var(--muted)}
+.pencil{position:relative;display:inline-block;margin-top:1.4rem;font:700 clamp(1.5rem,4vw,2rem)/1.15 var(--f-hand);color:var(--pencil);transform:rotate(-2deg);max-width:22ch}
+.pencil small{display:block;font:700 .85rem/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.2rem}
+.scribble{display:block;width:100%;height:.6rem;margin-top:.1rem;overflow:visible}
+.scribble path{fill:none;stroke:var(--pencil);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw 1.1s .3s ease-out backwards}
+@keyframes draw{from{stroke-dashoffset:1}}
+@media (prefers-reduced-motion:reduce){.scribble path{animation:none}}
+
+/* region, wonder, trail */
+.tally{margin-top:.6rem;font-style:italic;color:var(--muted)}
+.regbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem .5rem;margin-top:.9rem}
+.regbar span{font:700 .85rem/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-right:.3rem}
+.regbar button{font:400 1rem/1.2 var(--f-body);color:var(--ink);background:transparent;border:1px solid var(--rule);padding:.35rem .9rem;border-radius:99px;cursor:pointer}
+.regbar button:hover{border-color:var(--rose);color:var(--rose)}
+.regbar button[aria-pressed="true"]{background:var(--mauve);border-color:var(--mauve);color:var(--btn-fg)}
+.extras{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.6rem 3rem;padding:1.4rem 0;border-bottom:1px solid var(--rule)}
+@media (max-width:760px){.extras{grid-template-columns:minmax(0,1fr)}}
+.wonder{background:var(--paper-2);padding:1.1rem 1.3rem;border-left:4px solid var(--rose)}
+.wonder p:last-child{font-style:italic}
+.trail ol{margin:0;padding:0 0 0 1.3rem}
+.trail li{padding:.35rem 0}
+.trail li a{font-family:var(--f-display);font-weight:600;text-decoration-color:var(--rose);text-underline-offset:.2em}
+.trail li span{display:block;font-style:italic;color:var(--muted)}
+.reg{color:var(--mauve)}
+.dip{font-style:normal;font-size:.9rem;letter-spacing:.04em}
+
+
+.edit{color:var(--pencil)}
+
+/* sections + items */
+.sec{padding-top:2.2rem}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem 1.2rem;padding-bottom:.5rem;border-bottom:3px double var(--dust)}
+.sec-head h2{font:italic 700 clamp(1.6rem,4vw,2.2rem)/1.1 var(--f-display)}
+.sec-head h2 a{text-decoration:none}
+.sec-head h2 a:hover{color:var(--rose)}
+.sec-head p{color:var(--muted);font-style:italic}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:3rem}
+@media (max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}}
+.item{padding:1.2rem 0 1.3rem;border-bottom:1px solid var(--rule);min-width:0}
+.meta{display:flex;flex-wrap:wrap;gap:.1rem .8rem;font:700 .85rem/1.4 var(--f-body);letter-spacing:.18em;text-transform:uppercase}
+.kind{color:var(--rose)}
+.secname{color:var(--muted);text-decoration:none;font-weight:500}
+.secname:hover{color:var(--rose)}
+.item h3{font:600 1.32rem/1.25 var(--f-display);margin:.35rem 0 .15rem}
+.item h3 a{text-decoration:underline;text-decoration-color:var(--rose);text-decoration-thickness:1.5px;text-underline-offset:.2em}
+.item h3 a:hover{color:var(--rose)}
+.item h3 a::after{content:" \2197";font-family:var(--f-body);font-size:.8em;color:var(--rose)}
+.src{font-style:italic;color:var(--muted);font-size:1.02rem}
+.blurb{margin-top:.55rem}
+.way{margin-top:.5rem;font-style:italic}
+.way span{font:700 .85rem/1 var(--f-body);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-right:.35rem}
+.if{margin-top:.5rem;font-size:1.02rem}
+.if b{font-weight:700;letter-spacing:.02em}
+.tags{margin-top:.7rem;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tags a{text-decoration:none}
+.tags a:hover{color:var(--rose);text-decoration:underline}
+.from{margin-top:.35rem;font-size:.9rem;color:var(--muted)}
+.from a{text-decoration:none;border-bottom:1px dotted var(--muted)}
+.from a:hover{color:var(--rose)}
+mark{background:var(--mark);color:inherit;padding:0 .08em;border-radius:2px}
+
+/* back page */
+.backpage{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr));gap:1.2rem 2.4rem;margin-top:2.6rem;padding:1.4rem 0;border-top:3px double var(--dust);border-bottom:1px solid var(--dust)}
+@media (max-width:820px){.backpage{grid-template-columns:minmax(0,1fr)}}
+.backpage p:last-child{font-style:italic}
+.flip-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:1.4rem;font-size:1rem}
+.flip-nav a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.flip-nav a:hover{color:var(--rose);border-color:var(--rose)}
+
+/* archive, sections, tags */
+.pagehead{padding:.2rem 0 1rem;border-bottom:3px double var(--dust)}
+.pagehead h1{font:800 clamp(2rem,5vw,3rem)/1.05 var(--f-display)}
+.pagehead p{color:var(--muted);font-style:italic;margin-top:.4rem;max-width:56ch}
+.month{font:italic 700 1.4rem/1 var(--f-display);color:var(--rose);margin:2rem 0 .4rem}
+.row{display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:1rem;padding:.95rem 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.row:hover h3{color:var(--rose)}
+.row .d{text-align:center;line-height:1}
+.row .d b{display:block;font:800 2.2rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.row .d span{font:700 .85rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.row h3{font:700 1.3rem/1.2 var(--f-display)}
+.row .k{font-style:italic;color:var(--muted)}
+.row .m{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-top:.25rem;font-weight:700}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 3rem;margin-top:.5rem}
+@media (max-width:760px){.tiles{grid-template-columns:minmax(0,1fr)}}
+.tile{display:block;padding:1.1rem 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.tile h3{font:italic 700 1.5rem/1.1 var(--f-display)}
+.tile:hover h3{color:var(--rose)}
+.tile p{color:var(--muted)}
+.tile .m{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:700;margin-top:.3rem}
+.cloud{list-style:none;margin:1.2rem 0 0;padding:0;columns:3 14rem;column-gap:2.5rem}
+.cloud li{break-inside:avoid;padding:.3rem 0;border-bottom:1px dotted var(--rule)}
+.cloud a{text-decoration:none;display:flex;justify-content:space-between;gap:1rem}
+.cloud a:hover{color:var(--rose)}
+.cloud .n{color:var(--muted);font-variant-numeric:tabular-nums}
+.when{font:italic 700 1.15rem/1 var(--f-display);color:var(--rose);margin:1.8rem 0 0;padding-bottom:.3rem;border-bottom:1px solid var(--dust)}
+
+/* search view */
+.ctrls{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:1rem 0}
+.ctrls label{display:flex;flex-direction:column;gap:.15rem;font:700 .85rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.ctrls select{font:400 1rem/1.3 var(--f-body);color:var(--ink);background:var(--paper-2);border:1px solid var(--rule);padding:.4rem .5rem;border-radius:3px;max-width:14rem}
+.count{font-style:italic;color:var(--muted);margin-bottom:.2rem}
+.try{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin:.5rem 0 1.4rem}
+.try button{font:italic 400 1.05rem/1.3 var(--f-body);background:transparent;color:var(--ink);border:1px solid var(--rule);padding:.3rem .8rem;border-radius:99px;cursor:pointer}
+.try button:hover{border-color:var(--rose);color:var(--rose)}
+
+/* footer */
+.foot{margin-top:3rem;padding-top:1.4rem;border-top:3px double var(--dust);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:1.4rem 3rem;font-size:1rem}
+@media (max-width:760px){.foot{grid-template-columns:minmax(0,1fr)}}
+.foot .big{font:italic 700 1.4rem/1.2 var(--f-display);margin-bottom:.5rem}
+.foot small{display:block;margin-top:.8rem;color:var(--muted);font-size:.92rem}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{padding:.25rem 0}
+.foot a{text-decoration-color:var(--rose);text-underline-offset:.2em}
+.btn{display:inline-block;margin-top:.7rem;background:var(--mauve);color:var(--btn-fg);text-decoration:none;font:700 .9rem/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;padding:.85rem 1.3rem;border-radius:3px}
+.btn:hover{filter:brightness(1.08)}
+
+/* ---- additions: comfort tools, filters, shelf, picks, vignettes, sticky strip ---- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--paper);z-index:30}
+[tabindex="-1"]:focus{outline:none}
+button{font-family:inherit}
+
+.tools{display:flex;align-items:center;gap:.4rem}
+.tools button{display:inline-flex;align-items:center;justify-content:center;min-width:2.5rem;height:2.5rem;padding:0 .5rem;background:transparent;color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:700 .95rem/1 var(--f-body);cursor:pointer}
+.tools button:hover{border-color:var(--rose);color:var(--rose)}
+.tools svg{width:1.15rem;height:1.15rem}
+.nav .cnt{letter-spacing:.04em}
+.hint{font:700 .8rem/1 var(--f-body);color:var(--muted);border:1px solid var(--rule);border-radius:3px;padding:.2rem .45rem}
+@media (hover:none){.hint{display:none}}
+
+.house{max-width:56ch;margin:.9rem auto 0;color:var(--ink)}
+.house span{display:block;font:700 .85rem/1.2 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:.2rem}
+.filters{display:flex;flex-direction:column;align-items:center;gap:.6rem;margin-top:1rem}
+.filters .regbar{margin-top:0}
+.regbar span{font-size:.85rem}
+.regbar button{min-height:2.4rem}
+.regbar button:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+
+.picks{padding:1.4rem 0 1.6rem;border-bottom:1px solid var(--rule)}
+.pickl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(15.5rem,100%),1fr));gap:1.4rem 2.2rem}
+.pickl li{min-width:0;border-top:2px solid var(--ink);padding-top:.7rem;display:flex;flex-direction:column;gap:.1rem}
+.pickl h3{font:600 1.2rem/1.25 var(--f-display);margin:.25rem 0 .1rem}
+.pickl h3 a{text-decoration:underline;text-decoration-color:var(--rose);text-decoration-thickness:1.5px;text-underline-offset:.2em}
+.pickl h3 a:hover{color:var(--rose)}
+.pickl .way{margin-top:.3rem}
+.pickl .act{align-self:flex-start;margin-top:.6rem}
+.own{display:block;background:var(--paper-2);padding:1rem 1.3rem;margin-top:1.4rem;border-left:4px solid var(--mauve)}
+.own .label{margin-bottom:.3rem;color:var(--mauve)}
+.own a{font:600 1.1rem/1.3 var(--f-display);text-decoration-color:var(--mauve);text-underline-offset:.2em}
+.own .ownline{display:block;font-style:italic;color:var(--muted)}
+.shelves-head{margin-top:2.4rem;text-align:center}
+.shelves-head h2{font:italic 800 clamp(1.8rem,5vw,2.6rem)/1.1 var(--f-display)}
+.shelves-head p{color:var(--muted);font-style:italic;margin-top:.2rem}
+
+.sec{scroll-margin-top:4rem}
+.sec-head{align-items:center}
+.sec-head h2{margin-right:.2rem}
+.ic{width:2rem;height:2rem;flex:none;color:var(--rose)}
+.ic.alt{color:var(--mauve)}
+.pagehead h1 .ic{width:1em;height:1em;margin-right:.35em;vertical-align:-.1em}
+.tile .ic{width:2.2rem;height:2.2rem;margin-bottom:.4rem}
+.grid.one{grid-template-columns:minmax(0,1fr);max-width:46rem;margin-inline:auto}
+.item{scroll-margin-top:4rem}
+.item .meta .badge{color:var(--mauve)}
+.item .meta .badge::before{content:"\2022";margin-right:.8rem;color:var(--muted)}
+.pn{margin-top:.45rem;font:700 1.4rem/1.15 var(--f-hand);color:var(--pencil);transform:rotate(-1.5deg);transform-origin:left center}
+.pickl .pn{margin-top:.2rem}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.1rem;margin-top:.8rem}
+.act{display:inline-flex;align-items:center;gap:.4rem;background:transparent;border:0;border-bottom:1px solid var(--rule);color:var(--ink);font:400 1rem/1.3 var(--f-body);padding:.35rem 0;min-height:2.2rem;cursor:pointer}
+.act svg{width:1.05rem;height:1.05rem;flex:none}
+.act:hover{color:var(--rose);border-color:var(--rose)}
+.act[aria-pressed="true"]{--hf:currentColor;color:var(--rose);border-color:var(--rose)}
+.act:focus-visible,.tagd summary:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.tagd{min-width:0}
+.tagd summary{cursor:pointer;list-style:none;color:var(--ink);font-size:1rem;border-bottom:1px solid var(--rule);padding:.35rem 0;min-height:2.2rem;display:flex;align-items:center}
+.tagd summary::-webkit-details-marker{display:none}
+.tagd summary::after{content:"\002B";margin-left:.4rem;color:var(--rose)}
+.tagd[open] summary::after{content:"\2212"}
+.tagd[open] summary{border-color:var(--rose)}
+.tagd .tags{margin-top:.5rem}
+.chk{color:var(--muted);font-size:.95rem}
+.sharein{display:block;width:100%;margin-top:.6rem;font:400 1rem/1.3 var(--f-body);color:var(--ink);background:var(--paper-2);border:1px solid var(--rule);padding:.45rem .6rem;border-radius:3px}
+.item .from{margin-top:.6rem}
+
+.month.backfiles{margin-top:3rem;padding-top:1.2rem;border-top:3px double var(--dust)}
+.shelfnote{color:var(--muted);font-style:italic;margin-bottom:.4rem}
+.weekp{list-style:none;margin:-.4rem 0 .4rem 5.2rem;padding:.6rem 0 .8rem;border-bottom:1px solid var(--rule)}
+@media (max-width:640px){.weekp{margin-left:0}}
+.weekp li{padding:.2rem 0}
+.weekp .kind{font:700 .85rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-right:.4rem}
+.weekp .src{color:var(--muted);font-style:italic;margin-left:.3rem}
+.weekp a{text-decoration-color:var(--rose);text-underline-offset:.2em}
+.cloud li.big a{font:italic 700 1.55rem/1.15 var(--f-display)}
+.cloud li.mid a{font-weight:700;font-size:1.2rem}
+details.rare{margin-top:1.8rem}
+details.rare summary{cursor:pointer;font:italic 700 1.15rem/1.2 var(--f-display);color:var(--rose);padding:.5rem 0;border-bottom:1px solid var(--dust)}
+.notice.empty{margin-top:1.4rem}
+.almanac{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem 2rem;padding:1rem 0 1.1rem;margin:0 0 1.2rem;border-top:1px solid var(--dust);border-bottom:1px solid var(--dust);font-size:1rem}
+.almanac .label{margin-bottom:.25rem}
+@media (max-width:720px){.almanac{grid-template-columns:minmax(0,1fr)}}
+.almanac p{margin:0}
+.almanac .am-head{grid-column:1/-1;margin:0;font:italic 500 1.1rem/1.3 var(--f-display);color:var(--muted);text-align:center}
+.fromalison{max-width:56ch;margin:1.2rem auto 0;text-align:center;font-family:var(--f-hand);font-size:1.6rem;line-height:1.25;color:var(--pencil)}
+.fromalison span{display:block;font:700 .85rem/1.2 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:.2rem}
+.start h2{font:800 1.5rem/1.2 var(--f-display);margin:1.8rem 0 .4rem}
+.start{text-align:center}
+.start p{max-width:62ch;margin-left:auto;margin-right:auto}
+.start p+p{margin-top:.7rem}
+.start ul{max-width:62ch;margin:0 auto;padding:0;list-style:none}
+.start li{margin:.4rem 0}
+.start .pagehead p{margin-left:auto;margin-right:auto}
+
+.shelftools{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin:.2rem 0 1.4rem}
+.copymsg{font-style:italic;color:var(--muted)}
+.copybox textarea{width:100%;font:400 1rem/1.4 var(--f-body);color:var(--ink);background:var(--paper-2);border:1px solid var(--rule);padding:.6rem;border-radius:3px;margin-bottom:1.2rem}
+.onefind{max-width:46rem;margin:0 auto}
+.again{text-align:center;margin-top:1.4rem}
+button.btn{border:0;cursor:pointer}
+.secchips{justify-content:flex-start;margin:.4rem 0 1.2rem}
+
+.jumpbar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--dust);padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.jumpbar ul{list-style:none;margin:0 auto;padding:0;display:flex;gap:0 1.3rem;overflow-x:auto;max-width:1080px;white-space:nowrap}
+.jumpbar button{all:unset;cursor:pointer;padding:.75rem 0;font:700 .85rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.jumpbar button:hover{color:var(--rose)}
+.jumpbar button:focus-visible{outline:2px solid var(--rose);outline-offset:-2px}
+.totop{position:fixed;z-index:20;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:.35rem;background:var(--mauve);color:var(--btn-fg);border:0;border-radius:3px;padding:.7rem 1rem;font:700 .85rem/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.totop:hover{filter:brightness(1.08)}
+.totop:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@media print{
+  :root,:root:not([data-theme="light"]),:root[data-theme="dark"]{--paper:#fff;--paper-2:#fff;--ink:#000;--muted:#333;--rose:#7a2f45;--mauve:#4b3a56;--rule:#bbb;--pencil:#a02c20;--mark:#eee;color-scheme:light}
+  body{background:#fff;color:#000;font-size:11pt}
+  body::before,.bar,.jumpbar,.totop,.filters,.acts,.index button,.foot .btn,.pickl .act,.regbar{display:none!important}
+  .item,.pickl li,.row,.tile{break-inside:avoid}
+  .sec{break-before:auto}
+  a{text-decoration:none}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sprig" viewBox="0 0 120 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 13 C30 5 62 20 118 12"/>
+      <path d="M22 10 q3 -8 10 -7 q-1 7 -10 7z"/>
+      <path d="M40 15 q3 7 11 6 q-2 -7 -11 -6z"/>
+      <path d="M62 14 q4 -8 11 -6 q-2 7 -11 6z"/>
+      <path d="M82 13 q4 7 12 5 q-3 -7 -12 -5z"/>
+      <path d="M100 11 q4 -7 10 -5 q-2 6 -10 5z"/>
+    </g>
+  </symbol>
+  <symbol id="lens" viewBox="0 0 20 20">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13 L18 18"/></g>
+  </symbol>
+
+  <symbol id="heart" viewBox="0 0 20 20"><path d="M10 17 C3 12 2 8.5 2 6.2 C2 3.6 4 2 6 2 C8 2 9.3 3.2 10 4.5 C10.7 3.2 12 2 14 2 C16 2 18 3.6 18 6.2 C18 8.5 17 12 10 17Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="fill:var(--hf,none)"/></symbol>
+  <symbol id="ic-leader" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 27 L11 21"/><path d="M11 21 C9 14 16 6 27 5 C26 16 18 23 11 21Z"/><path d="M13 19 L22 10"/></g></symbol>
+  <symbol id="ic-household" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15 H21 V19 C21 24 17.500 27 14 27 C10.500 27 7 24 7 19Z"/><path d="M10 15 C10 11 18 11 18 15"/><path d="M14 11 V9"/><path d="M21 17 C25 17 26 13 28 12"/><path d="M7 17 C3 17 3 24 8 24"/></g></symbol>
+  <symbol id="ic-sanctuary" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16 L16 6 L28 16"/><path d="M7 14 V27 H25 V14"/><path d="M14 27 V19 H18 V27"/><path d="M21 9 V5 H24 V12"/></g></symbol>
+  <symbol id="ic-midlife" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 7 H22 L25 16 H7Z"/><path d="M16 16 V25"/><path d="M11 27 H21"/><path d="M16 2 V4"/></g></symbol>
+  <symbol id="ic-reading" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8 C9 6 13 7 16 9 C19 7 23 6 28 8 V24 C23 22 19 23 16 25 C13 23 9 22 4 24Z"/><path d="M16 9 V25"/></g></symbol>
+  <symbol id="ic-wireless" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="24" height="16" rx="2"/><path d="M20 11 L26 4"/><circle cx="12" cy="19" r="4"/><path d="M20 16 H24 M20 19 H24 M20 22 H24"/></g></symbol>
+  <symbol id="ic-picture" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="24" height="18" rx="1"/><path d="M10 7 V25 M22 7 V25"/><path d="M6.500 11 H7.500 M6.500 16 H7.500 M6.500 21 H7.500 M24.500 11 H25.500 M24.500 16 H25.500 M24.500 21 H25.500"/></g></symbol>
+  <symbol id="ic-arts" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 5 C8 5 4 10 4 16 C4 23 10 27 15 27 C18 27 17 24 19 23 C21 22 28 24 28 16 C28 10 23 5 16 5Z"/><circle cx="10" cy="13" r="1.400"/><circle cx="15" cy="10" r="1.400"/><circle cx="21" cy="11" r="1.400"/><circle cx="10" cy="19" r="1.400"/></g></symbol>
+  <symbol id="ic-curiosities" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 25 V14 C9 7 23 7 23 14 V25"/><path d="M16 7.500 V5 M14 5 H18"/><path d="M6 25 H26 V27 H6Z"/><circle cx="16" cy="20" r="3"/></g></symbol>
+</svg>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="strap">For women, houses &amp; other serious matters</p>
+    <h1 class="title"><a class="title-link" href="#today" aria-label="The BrocanteHome Sourcebook: back to the front page"><span class="the">The</span>BrocanteHome Sourcebook</a></h1>
+    <div class="sub"><svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg><b>Daily companion to the monthly Gazette</b><svg class="sprig flip" aria-hidden="true"><use href="#sprig"/></svg></div>
+    <p class="lede">Housekeeping references, sanctuaries, midlife reading, books, films and curiosities, gathered every morning for women with rich inner lives and a weakness for a good lamp.</p>
+    <div class="dateline"><span>BrocanteHome, est. 2004</span><span id="today-date"></span><span>Price: one cup of tea</span></div>
+  </header>
+
+  <div class="bar">
+    <nav class="nav" aria-label="Sections of the Sourcebook">
+      <a href="#start" data-r="start">Start here</a>
+      <a href="#today" data-r="today">Today</a>
+      <a href="#week" data-r="week">This week</a>
+      <a href="#sections" data-r="sections">Sections</a>
+      <a href="#archive" data-r="archive">Archive</a>
+      <a href="#tags" data-r="tags">Tags</a>
+      <a href="#shelf" data-r="shelf">My shelf<span class="cnt" id="shelfn"></span></a>
+      <a href="#surprise" data-r="surprise">Surprise me</a>
+    </nav>
+    <form class="find" role="search" id="find">
+      <svg aria-hidden="true"><use href="#lens"/></svg>
+      <label class="vh" for="q">Search the Sourcebook</label>
+      <input id="q" type="search" autocomplete="off" placeholder="Search witch marks, Shaker, Pym, gardens…" enterkeyhint="search">
+      <kbd class="hint" aria-hidden="true">/</kbd>
+    </form>
+    <div class="tools" role="group" aria-label="Reading comfort">
+      <button type="button" id="sz-down" aria-label="Smaller text">A&minus;</button>
+      <button type="button" id="sz-up" aria-label="Larger text">A+</button>
+      <button type="button" id="theme" aria-label="Switch between light and dark" title="Light or dark"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 3 A7 7 0 0 1 10 17Z" fill="currentColor"/></svg></button>
+    </div>
+  </div>
+
+  <p class="vh" id="announce" role="status" aria-live="polite"></p>
+  <main id="view"><noscript>The Sourcebook needs JavaScript to turn its pages. Do switch it on, won’t you?</noscript></main>
+
+  <nav id="jumpbar" class="jumpbar" aria-label="In this issue" hidden></nav>
+  <button type="button" id="totop" class="totop" hidden>&uarr; Top</button>
+
+  <footer class="foot">
+    <div>
+      <p class="big">Come inside.</p>
+      <p>The Sourcebook is the daily companion to Alison May’s monthly Saturday broadsheet, The Gazette. A new issue goes up every morning, and every issue stays in the Archive, tagged and searchable.</p>
+      <a class="btn" href="https://brocantealison.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Come inside</a>
+      <small>Links open the original source in a new tab. The Gazette points at things, and doesn’t own any of the places it points to.</small>
+    </div>
+    <ul>
+      <li><a href="https://brocantealison.substack.com/p/the-brocantehome-gazette" target="_blank" rel="noopener noreferrer">The monthly Gazette, Vol. I, No. 1</a></li>
+      <li><a href="https://brocantealison.substack.com/p/housekeeping-as-creative-discipline" target="_blank" rel="noopener noreferrer">Housekeeping as Creative Discipline</a></li>
+      <li><a href="https://brocantealison.substack.com/" target="_blank" rel="noopener noreferrer">BrocanteHome on Substack</a></li>
+      <li><a href="https://brocantealison.substack.com/" target="_blank" rel="noopener noreferrer">Send us a find: reply to any BrocanteHome email</a></li>
+      <li><a href="#start">Start here: a tour of the house</a></li>
+      <li><a href="#archive">Every back issue</a></li>
+    </ul>
+  </footer>
+</div>
+
+<script type="application/json" id="gazette-data">
+{
+ "sections": [
+  {
+   "slug": "leader",
+   "name": "The Leader",
+   "desc": "From the editor’s desk, and the essays the Sourcebook grew from."
+  },
+  {
+   "slug": "household",
+   "name": "Household Affairs",
+   "desc": "Housekeeping wisdom, old kitchens and the quiet genius of a well-run home."
+  },
+  {
+   "slug": "sanctuary",
+   "name": "The Sanctuary Pages",
+   "desc": "Houses, gardens and rooms that hold a woman well. Many are open to visit."
+  },
+  {
+   "slug": "midlife",
+   "name": "The Midlife Pages",
+   "desc": "Voices and reading for the woman who is still arriving."
+  },
+  {
+   "slug": "reading",
+   "name": "The Reading Room",
+   "desc": "Books, shelves and the writers who kept house on paper."
+  },
+  {
+   "slug": "wireless",
+   "name": "The Wireless",
+   "desc": "Podcasts and radio for the washing-up, the walk and the long drive."
+  },
+  {
+   "slug": "picture",
+   "name": "The Picture House",
+   "desc": "Films, television and fabulous kitchens for lamplit evenings."
+  },
+  {
+   "slug": "arts",
+   "name": "The Arts Pages",
+   "desc": "Painters, makers and quilters worth a train ticket (or a very good armchair)."
+  },
+  {
+   "slug": "curiosities",
+   "name": "Cabinet of Curiosities",
+   "desc": "Odd objects, old customs and rabbit holes. Proceed with tea."
+  }
+ ],
+ "tags": {
+  "archives": "Archives",
+  "art": "Art",
+  "artists-homes": "Artists’ homes",
+  "arts-and-crafts": "Arts and Crafts",
+  "autumn": "Autumn",
+  "books": "Books",
+  "clothes": "Clothes and sewing",
+  "collections": "Collections",
+  "colonial": "Colonial America",
+  "comfort-reading": "Comfort reading",
+  "commonplace": "Commonplace books",
+  "cooking": "Cooking",
+  "cosy": "Cosy",
+  "cottage-garden": "Cottage gardens",
+  "country-houses": "Country houses",
+  "creative-discipline": "Creative discipline",
+  "design": "Design",
+  "domestic-fiction": "Domestic fiction",
+  "domestic-history": "Domestic history",
+  "essays": "Essays",
+  "exhibitions": "Exhibitions",
+  "family-saga": "Family sagas",
+  "feminism": "Feminism",
+  "film": "Film",
+  "folklore": "Folklore and custom",
+  "food-history": "Food history",
+  "food-writing": "Food writing",
+  "free": "Free to visit",
+  "free-to-read": "Free to read",
+  "gardens": "Gardens",
+  "hacks": "Household hints",
+  "halloween": "Hallowe’en",
+  "house-museums": "House museums",
+  "house-protection": "Protecting the house",
+  "housekeeping": "Housekeeping",
+  "interiors": "Interiors",
+  "kitchens": "Kitchens",
+  "mending": "Mending",
+  "midlife": "Midlife",
+  "ordinary-life": "Ordinary life",
+  "overlooked-women": "Overlooked women",
+  "podcasts": "Podcasts",
+  "publishers": "Publishers",
+  "quilts": "Quilts",
+  "radio": "Radio",
+  "recipes": "Recipes",
+  "reinvention": "Reinvention",
+  "rooms": "Rooms",
+  "sanctuary": "Sanctuary",
+  "servants": "Below stairs",
+  "shakers": "Shakers",
+  "simplicity": "Simplicity",
+  "slow-living": "Slow living",
+  "substack": "Substack",
+  "textiles": "Textiles",
+  "tv": "Television",
+  "victorian": "Victorian",
+  "witch-marks": "Witch marks",
+  "witches": "Witches",
+  "wonder": "Wonder",
+  "writers-homes": "Writers’ homes"
+ },
+ "issues": [
+  {
+   "id": "2026-10-31",
+   "type": "daily",
+   "label": "No. 1",
+   "title": "The House After Dark",
+   "kicker": "Witch marks, hidden shoes, kitchens worth a film and a Shaker bedroom, with gardens and podcasts on both sides of the Atlantic.",
+   "letter": [
+    "Good morning, and happy All Hallows’ Eve! It’s the one night of the year when everybody agrees that houses have personalities, and that something might be living in the wall. We’ve always thought so, and we’re delighted that so many museums have been taking notes.",
+    "So this morning’s Gazette has the whole house to roam. Down in the cellar are the daisy-wheel witch marks carved to trap passing demons. Up the chimney are the single shoes builders keep finding. In the kitchens are Colonial Williamsburg’s spoon bread, the Shakers’ sink rack and Nancy Meyers’s two islands. In the garden are Gertrude Jekyll and the cottage borders she made famous. And in the library, as ever, there’s a Barbara Pym. And on the new Wireless pages, eleven podcasts to keep you company over the washing-up, two of them about Pym herself.",
+    "It’s a long breakfast, so take your time. There are links from Britain and from America, and every one of them opens for anybody, without a password. Start anywhere. There isn’t a wrong door in this house."
+   ],
+   "pencil": "Every house keeps something it won’t explain.",
+   "wonder": "Down in the cellar of Shakespeare’s Birthplace, at the top of the steps, a pair of daisy wheels has been scratched into the stone, probably by a publican after 1600 and perhaps to protect the beer. The idea was that a demon who saw a line would follow it round and round the petals and get stuck. Which means that, for about four hundred years, the safest thing in the house was a pencil and a compass.",
+   "trail": {
+    "title": "The Rabbit Hole: from the cellar steps to the chimney",
+    "steps": [
+     {
+      "t": "Witch Markings and Magic in Old Buildings",
+      "line": "Start in the cellar, with the daisy wheels."
+     },
+     {
+      "t": "Warding Off Evil With Witch Marks",
+      "line": "Find out why a demon would follow the line."
+     },
+     {
+      "t": "Concealed Shoes (and the Northampton Index)",
+      "line": "Climb up the chimney, and meet the shoes."
+     },
+     {
+      "t": "Concealed Shoes in Buildings, by June Swann",
+      "line": "Go deep, with the scholar who spent decades on the question."
+     }
+    ]
+   },
+   "checked": "Hallowe’en requires no costume. A housecoat with large pockets will do very nicely. Every link in this issue has been opened and read, and none of them asks you for a password.",
+   "advises": "Make a pot of something large, open three links that surprise you, and don’t apologise for the third cup.",
+   "commonplace": "Write down what you left on the doorstep or the windowsill tonight, and who it was for. Add the weather. Leave out the meaning.",
+   "items": [
+    {
+     "s": "household",
+     "k": "read",
+     "r": "us",
+     "t": "Simplicity, Utility, and Craftsmanship: The Shaker Style",
+     "src": "US National Park Service",
+     "u": "https://www.nps.gov/articles/shaker-style.htm",
+     "b": "The Shakers built chairs so lovely they won a medal at the 1876 Philadelphia Centennial Exhibition for “strength, sprightliness, and modest beauty”. They also cut interior windows into their dwellings so light could travel into the dark middle rooms. Practical, yes, but also rather romantic.",
+     "w": "A home doesn’t need much. It needs a place for everything and enough light to see it by.",
+     "i": "you’d like permission to clear one shelf and call it a design decision.",
+     "g": [
+      "shakers",
+      "simplicity",
+      "design",
+      "domestic-history"
+     ],
+     "p": 1
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "us",
+     "t": "In the Dwelling House: 16 Design Ideas to Steal from the Shakers",
+     "src": "Remodelista",
+     "u": "https://www.remodelista.com/posts/shaker-style-design-lessons-canterbury-shaker-village/",
+     "b": "A tour of Canterbury Shaker Village that comes home with sixteen ideas you can actually use: ladles hung on a water pipe, a wooden rack inside the sink that catches scraps and doubles as a drainer, and furniture painted sunshine yellow to see off a long New England winter.",
+     "w": "A well-run kitchen is a small act of genius that nobody applauds. Consider this the applause.",
+     "i": "your kitchen drawers have opinions and you’d like to win the argument.",
+     "g": [
+      "shakers",
+      "kitchens",
+      "interiors",
+      "housekeeping"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "visit",
+     "r": "us",
+     "t": "Fifty rooms at Hancock Shaker Village",
+     "src": "Hancock Shaker Village, Massachusetts",
+     "u": "https://hancockshakervillage.org/?p=10834",
+     "b": "Fifty room-settings in the historic buildings, each laid out with furniture, crafts and the everyday objects of Shaker life. If a Pinterest board could be walked through, it would be this one, only with fewer fake plants and more broom hooks.",
+     "w": "Order, when it’s done with love, looks a lot like calm.",
+     "i": "you’re planning a trip to the Berkshires, or a very large daydream.",
+     "g": [
+      "shakers",
+      "house-museums",
+      "simplicity",
+      "rooms"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "us",
+     "t": "Step into an 18th-century Kitchen",
+     "src": "Colonial Williamsburg",
+     "u": "https://www.colonialwilliamsburg.org/learn/recipes/",
+     "b": "Tavern spoon bread, snow eggs, Mary Randolph’s fried chicken, onion pie, potato balls and sweet buns: a whole shelf of historic recipes from the Colonial Williamsburg kitchens, free to copy out. Somebody once stirred each of these by hand, and now it’s your turn.",
+     "w": "Cooking from an old receipt is a conversation across the centuries, mostly about butter.",
+     "i": "you want a project for a rainy Sunday that ends with something to eat.",
+     "g": [
+      "recipes",
+      "food-history",
+      "colonial",
+      "cooking"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "us",
+     "t": "Want to Eat Like a Colonist? Ask This Virginia Chef",
+     "src": "HISTORY",
+     "u": "https://history.com/news/want-to-eat-like-a-colonist-ask-this-virginia-chef",
+     "b": "Meet Frank Clark, Colonial Williamsburg’s Master of Historic Foodways, who recreates eighteenth-century Virginia meals in period kitchens. He even got a colonial-style beer programme going, with four brews by 2015. A job title to covet.",
+     "w": "Every old recipe has a cook behind it, and every cook was making the best of what the garden gave her.",
+     "i": "you’ve ever suspected your great-grandmother’s cooking was cleverer than it looked.",
+     "g": [
+      "food-history",
+      "colonial",
+      "cooking",
+      "kitchens"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "us",
+     "t": "10 Questionable Household Tips from the 19th-Century White House Staff",
+     "src": "Mental Floss",
+     "u": "https://www.mentalfloss.com/article/12575/10-questionable-household-tips-19th-century-white-house-staff",
+     "b": "A pitcher of ice water left in the room will “absorb all the gases”, and an uncorked bottle of pennyroyal left out overnight will see off the mosquitoes. A gloriously doubtful list of housekeeping tips from the people who ran the White House. Do not try these at home, but do enjoy them with a biscuit.",
+     "w": "Some household wisdom is wisdom. The rest makes a lovely story.",
+     "i": "you collect hints, tips and wheezes and have a drawer for the evidence.",
+     "g": [
+      "hacks",
+      "domestic-history",
+      "wonder",
+      "victorian"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "visit",
+     "r": "uk",
+     "t": "Smallhythe Place, Kent",
+     "src": "National Trust",
+     "u": "https://www.nationaltrust.org.uk/visit/kent/smallhythe-place",
+     "b": "Ellen Terry, the great Victorian actress, lived in this early-sixteenth-century cottage, and after her death in 1928 it became a museum of her collection. Outside there’s a 55-metre rose pergola with 52 roses of nine varieties, blooming May to July. Check opening times before you set off, as it closes for the winter.",
+     "w": "Not every grand life needs a grand house. A crooked old one full of roses will do beautifully.",
+     "i": "you’re planning next summer’s pilgrimage and want to start with the roses.",
+     "g": [
+      "house-museums",
+      "gardens",
+      "writers-homes",
+      "sanctuary"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "visit",
+     "r": "us",
+     "t": "The Mount: Edith Wharton’s Home in Lenox, Massachusetts",
+     "src": "US National Park Service",
+     "u": "https://www.nps.gov/places/themount.htm",
+     "b": "Wharton designed the house in 1902, and it’s now a National Historic Landmark in the Berkshires. She believed in rooms that were properly proportioned, which is why every wall earns its keep.",
+     "w": "A woman who builds her own house and writes her own books is, we feel, quite the role model.",
+     "i": "you’d like to know what a perfectly proportioned room feels like.",
+     "g": [
+      "house-museums",
+      "writers-homes",
+      "sanctuary",
+      "rooms"
+     ],
+     "p": 1
+    },
+    {
+     "s": "sanctuary",
+     "k": "read",
+     "r": "uk",
+     "t": "Munstead Wood: The House Edwin Lutyens Built for Gertrude Jekyll",
+     "src": "Country Life",
+     "u": "https://www.countrylife.co.uk/architecture/munstead-wood-the-house-that-edwin-lutyens-built-for-gertrude-jekyll-251406",
+     "b": "Lutyens was twenty when he met Jekyll, a gardener more than twenty years his senior, at a Surrey tea party; she invited him to call the next day. Her house became a craft room, book room, photographic darkroom and a shop for flowers, which sounds like exactly what a house should be.",
+     "w": "A home can be a workroom as well as a refuge. Ask any woman with a craft table in the spare room.",
+     "i": "you’d like a house that works as hard as you do.",
+     "g": [
+      "gardens",
+      "cottage-garden",
+      "writers-homes",
+      "arts-and-crafts",
+      "country-houses"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "read",
+     "r": "uk",
+     "t": "Gardeners You Should Know: Gertrude Jekyll",
+     "src": "Garden Museum, London",
+     "u": "https://www.gardenmuseum.org.uk/?p=10525",
+     "b": "She was a painter first, and it shows: Jekyll planted in seasonal drifts of colour as though the border were a canvas. She and Lutyens worked together on more than four hundred gardens. The short version of how the English cottage garden got its good looks.",
+     "w": "A garden is a painting you keep adding to, with mud under your fingernails.",
+     "i": "you’re planning bulbs, or planning to plan bulbs.",
+     "g": [
+      "gardens",
+      "cottage-garden",
+      "art",
+      "arts-and-crafts"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "read",
+     "r": "world",
+     "t": "The Two Women Behind the Cottage Garden",
+     "src": "Laidback Gardener",
+     "u": "https://laidbackgardener.blog/2020/01/12/the-two-women-behind-the-cottage-garden/",
+     "b": "Gertrude Jekyll and Vita Sackville-West are the names usually given for the romantic, tumbled, cram-it-all-in cottage garden. A friendly short read, good with a second cup of tea and a notebook.",
+     "w": "The cottage garden is the original cosy: abundant, a bit untidy, and entirely unapologetic.",
+     "i": "you want a five-minute read that makes you want to go and plant something.",
+     "g": [
+      "gardens",
+      "cottage-garden",
+      "cosy"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "read",
+     "r": "us",
+     "t": "Garden Visit: Secrets of Another Century at Colonial Williamsburg",
+     "src": "Gardenista",
+     "u": "https://www.gardenista.com/posts/garden-visit-secrets-of-another-century-at-colonial-williamsburg/",
+     "b": "Larkspur and foxgloves jostle with dill in the tavern border, the cabbages go straight onto the eighteenth-century menu, and crushed Chesapeake Bay shells make the paths. A garden that feeds the kitchen and charms the eye, both at once.",
+     "w": "The most beautiful gardens are the ones where somebody expects dinner.",
+     "i": "you’ve ever wanted a border that was also a pantry.",
+     "g": [
+      "gardens",
+      "colonial",
+      "kitchens",
+      "slow-living"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "visit",
+     "r": "us",
+     "t": "Shaker Retiring Room",
+     "src": "The Metropolitan Museum of Art, New York",
+     "u": "https://www.metmuseum.org/about-the-met/collection-areas/the-american-wing/period-rooms/shaker-room",
+     "b": "A whole Shaker bedroom, lifted from a community at Mount Lebanon, New York, and rebuilt in the American Wing with its furniture. Read about it from your armchair, and you’ll find yourself rearranging the bedroom by teatime.",
+     "w": "A bedroom need only hold sleep, a chair and a peg for your shawl.",
+     "i": "you find a quiet, plain room the most restful thing in the world.",
+     "g": [
+      "shakers",
+      "rooms",
+      "house-museums",
+      "simplicity"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "visit",
+     "r": "uk",
+     "t": "Barbara Pym’s Blue Plaque",
+     "src": "English Heritage",
+     "u": "https://www.english-heritage.org.uk/visit/blue-plaques/barbara-pym/",
+     "b": "The blue plaque for the novelist who wrote so well about curates, jumble sales and excellent women. Plan a plaque-spotting stroll, or just read the page and enjoy being in her company for a minute.",
+     "w": "Some of the finest literature in English concerns the question of who will do the flowers.",
+     "i": "you adore a good fictional church-hall committee.",
+     "g": [
+      "writers-homes",
+      "domestic-fiction",
+      "overlooked-women"
+     ]
+    },
+    {
+     "s": "midlife",
+     "k": "read",
+     "r": "world",
+     "t": "Reinvention: A Midstack Roundup",
+     "src": "Midstack, on Substack",
+     "u": "https://midstack.substack.com/p/reinvention-a-midstack-roundup-part",
+     "b": "Nine writers on beginning again in midlife, with a short blurb and bio for each, so you can pick the one that sounds like you. A good bookmark for a morning when you suspect the next chapter has already begun.",
+     "w": "At fifty-something the best news is that there’s a lot of story left, and you’re finally the one holding the pen.",
+     "i": "you’ve ever suspected the second half is where the fun starts.",
+     "g": [
+      "midlife",
+      "reinvention",
+      "essays",
+      "substack"
+     ],
+     "p": 1,
+     "pn": "For the woman still arriving."
+    },
+    {
+     "s": "midlife",
+     "k": "browse",
+     "r": "us",
+     "t": "Who Was Gladys Taber?",
+     "src": "Friends of Gladys Taber",
+     "u": "https://friendsofgladystaber.org/about-gladys-1",
+     "b": "Gladys Taber (1899 to 1980) wrote about her Connecticut farmhouse, Stillmeadow, in books and magazine columns that reached American kitchens for decades, recipes and kitchen remodels included. A patron saint of cosy, domestic non-fiction, and a very good place to start.",
+     "w": "She wrote about her own kitchen so warmly that half a nation felt invited. Quite the business model.",
+     "i": "you suspect that writing about home is a perfectly serious calling.",
+     "g": [
+      "midlife",
+      "writers-homes",
+      "cooking",
+      "comfort-reading",
+      "domestic-history"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "read",
+     "r": "uk",
+     "t": "The Cazalet Chronicles in Order",
+     "src": "Pan Macmillan",
+     "u": "https://www.panmacmillan.com/blogs/fiction/cazalet-chronicles-books-in-order",
+     "b": "Five novels by Elizabeth Jane Howard following one large family through the war years and beyond, with country houses, nursery tea and several people behaving badly at dinner. The page lists them in reading order. Set aside the winter.",
+     "w": "A very long family saga is a kind of hibernation, with biscuits.",
+     "i": "you’d like a book to move into for the next few months.",
+     "g": [
+      "books",
+      "family-saga",
+      "domestic-fiction",
+      "comfort-reading"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "essay",
+     "r": "us",
+     "t": "Decorating Houses With Edith Wharton",
+     "src": "Literary Hub",
+     "u": "https://lithub.com/decorating-houses-with-edith-wharton-on-interior-design-as-art-and-literary-practice",
+     "b": "Emily J. Orlando shows how Wharton’s 1897 handbook The Decoration of Houses, written with Ogden Codman Jr., is a serious piece of design thinking: proportion, restraint and honest materials, with the same eye running through her fiction. Rooms, in Wharton’s hands, were a form of character study.",
+     "w": "A drawing room is a portrait you hang yourself in.",
+     "i": "you enjoy your interiors served with a side of literary criticism.",
+     "g": [
+      "books",
+      "interiors",
+      "design",
+      "essays",
+      "writers-homes"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "essay",
+     "r": "uk",
+     "t": "The Art of Caustic Cosiness: On Barbara Pym’s The Sweet Dove Died",
+     "src": "Literary Hub",
+     "u": "https://lithub.com/the-art-of-caustic-cosiness-on-barbara-pyms-the-sweet-dove-died",
+     "b": "Susie Boyt on the novel where tea and tablecloths are sharp as tacks. Cosy and cutting at once is the Pym way, and Boyt has her number. Perfect if you’ve ever loved a book that was both comforting and slightly cross.",
+     "w": "Cosy was never the same as soft. The best of us have edges and a nice teapot.",
+     "i": "you like your comfort reading with some bite.",
+     "g": [
+      "books",
+      "domestic-fiction",
+      "essays",
+      "cosy"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "essay",
+     "r": "uk",
+     "t": "Persephone Books: Finding Space for Women Writers",
+     "src": "Literary Hub",
+     "u": "https://lithub.com/persephone-books-finding-space-for-women-writers-for-two-decades",
+     "b": "Nicola Beauman started Persephone Books in 1999 to bring back neglected women writers of the early twentieth century, beginning as a mail-order press and now based in Bath. Those grey jackets are a quiet legend, and this tells you how they came to be.",
+     "w": "Somewhere a forgotten novel is waiting for exactly you. The grey ones are a good place to look.",
+     "i": "you’ve ever wondered who gets remembered and who gets lost.",
+     "g": [
+      "publishers",
+      "overlooked-women",
+      "books",
+      "domestic-fiction"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "book",
+     "r": "us",
+     "t": "Home Cooking: A Writer in the Kitchen",
+     "src": "Laurie Colwin, via Modern Mrs Darcy",
+     "u": "https://modernmrsdarcy.com/books/home-cooking/",
+     "b": "Laurie Colwin’s beloved essays on cooking for friends, disasters included, are the kind of book people press into each other’s hands. The page is a friendly guide to what it is and why readers keep coming back to it.",
+     "w": "Cooking for people you love, badly, with great enthusiasm, counts.",
+     "i": "you read cookery writing like other people read novels.",
+     "g": [
+      "books",
+      "cooking",
+      "essays",
+      "comfort-reading"
+     ]
+    },
+    {
+     "s": "picture",
+     "k": "watch",
+     "r": "us",
+     "t": "How Practical Magic Overcame Flop Status to Become a Cosy Halloween Favourite",
+     "src": "Pajiba",
+     "u": "https://www.pajiba.com/film_reviews/how-practical-magic-overcame-flop-status-to-become-a-cozy-halloween-favorite.php",
+     "b": "A big sprawling Massachusetts house, a midnight margarita, a garden full of herbs and two sisters: how the film that critics shrugged at turned into the film everyone puts on in October. Reader, the greenhouse and kitchen are the real stars.",
+     "w": "The best witches have a well-stocked still room and a very good kitchen table.",
+     "i": "you’d like a film in which the house is the main character.",
+     "g": [
+      "film",
+      "witches",
+      "cosy",
+      "halloween",
+      "kitchens"
+     ]
+    },
+    {
+     "s": "picture",
+     "k": "watch",
+     "r": "uk",
+     "t": "Irresistibly Cosy Films to Snuggle Up With This Autumn",
+     "src": "Hello!",
+     "u": "https://www.hellomagazine.com/film/855308/irresistibly-cosy-films-to-snuggle-up-with-this-autumn",
+     "b": "A friendly list for a cold evening, with blankets strongly implied. Treat it as a menu: pick one, make toast, get under the throw.",
+     "w": "A film on a wet evening is a form of housekeeping for the spirit.",
+     "i": "you want somebody else to choose tonight’s film.",
+     "g": [
+      "film",
+      "cosy",
+      "autumn"
+     ]
+    },
+    {
+     "s": "picture",
+     "k": "read",
+     "r": "uk",
+     "t": "Brideshead Revisited (Again): The 10 Scene-Stealing Country Homes of Film and TV",
+     "src": "Country Life",
+     "u": "https://www.countrylife.co.uk/out-and-about/brideshead-revisited-again-the-10-scene-stealing-british-country-homes-from-film-and-television",
+     "b": "Wilton House, Lyme Park, Castle Howard, Highclere, Castle Ward, Alnwick and more: the houses that have played the leading roles in the screen dramas you’ve loved. Make a list, work out how many you’ve seen, and plan accordingly.",
+     "w": "Half of us only fell in love with houses because of what was filmed in them.",
+     "i": "you can’t watch a costume drama without pausing to look at the staircase.",
+     "g": [
+      "film",
+      "tv",
+      "country-houses",
+      "house-museums"
+     ]
+    },
+    {
+     "s": "picture",
+     "k": "read",
+     "r": "us",
+     "t": "These TV and Movie Kitchens Offer Endless Design Inspiration",
+     "src": "Frederic Magazine",
+     "u": "https://fredericmagazine.com/2025/08/screening-room-kitchens-in-film/",
+     "b": "Something’s Gotta Give has white Shaker-style cabinets, soapstone and a farmhouse sink, all built on a Hollywood backlot; The Intern has a Brooklyn brownstone kitchen with marble and open shelves. A catalogue of screen kitchens, to be read with an eye on your own.",
+     "w": "The kitchen is the heart of the film, and the one room everyone remembers.",
+     "i": "you’ve ever paused a film to look at the saucepans.",
+     "g": [
+      "film",
+      "kitchens",
+      "interiors",
+      "cosy"
+     ]
+    },
+    {
+     "s": "picture",
+     "k": "read",
+     "r": "us",
+     "t": "Nancy Meyers’s Real-Life Kitchen Is Even Better Than the Ones in Her Movies",
+     "src": "Apartment Therapy",
+     "u": "https://www.apartmenttherapy.com/nancy-meyers-kitchen-36748551",
+     "b": "The director behind so many dreamy screen kitchens has one at home, with two islands and plenty of space for sitting, eating, prepping and cooking. She confirmed it inspired the one in Something’s Gotta Give. A dream with a hob.",
+     "w": "Make the kitchen the kind of room where people end up. They always do anyway.",
+     "i": "you’d like to peek into the room where the magic is planned.",
+     "g": [
+      "film",
+      "kitchens",
+      "interiors",
+      "cosy"
+     ]
+    },
+    {
+     "s": "picture",
+     "k": "read",
+     "r": "uk",
+     "t": "The Nancy Meyers Aesthetic",
+     "src": "Grand Designs Magazine",
+     "u": "https://www.granddesignsmagazine.com/kitchen/the-nancy-meyers-aesthetic",
+     "b": "A British design magazine’s guide to the Nancy Meyers look, to bring home. Parts are promotional for a kitchen company, so read it with a pinch of salt and a wooden spoon.",
+     "w": "Warm, deep and a little bit chaotic. We call that being at home.",
+     "i": "you’d like the recipe for a screen-worthy kitchen.",
+     "g": [
+      "film",
+      "kitchens",
+      "interiors",
+      "design"
+     ]
+    },
+    {
+     "s": "arts",
+     "k": "visit",
+     "r": "world",
+     "t": "Margaret Olley’s Rooms, Rebuilt",
+     "src": "Tweed Regional Gallery, New South Wales",
+     "u": "https://gallery.tweed.nsw.gov.au/visit/margaret-olley-art-centre",
+     "b": "After Margaret Olley died, her Hat Factory and Yellow Room were recreated in a gallery in Murwillumbah, with more than 20,000 of the objects she collected to paint. Jugs, flowers, patterned cloths, all in place. A reminder that clutter, curated, is a way of life.",
+     "w": "She collected the things she wanted to paint and painted the things she loved. Admirably simple.",
+     "i": "your own shelves are secretly a still life.",
+     "g": [
+      "art",
+      "artists-homes",
+      "rooms",
+      "collections"
+     ]
+    },
+    {
+     "s": "arts",
+     "k": "visit",
+     "r": "uk",
+     "t": "William Morris Gallery, Walthamstow",
+     "src": "Art Fund",
+     "u": "https://www.artfund.org/explore/museums-and-galleries/william-morris-gallery",
+     "b": "The only gallery in Britain devoted to the great Arts and Crafts designer, housed in his former family home in Walthamstow. Free to visit, open Tuesday to Sunday, and papered in patterns you probably already own a cushion of.",
+     "w": "Morris’s famous advice was to have nothing in the house you don’t know to be useful or believe to be beautiful. We think that’s a splendid test for a cupboard.",
+     "i": "you’ve got a Morris print somewhere and want to meet its maker.",
+     "g": [
+      "arts-and-crafts",
+      "design",
+      "house-museums",
+      "free",
+      "textiles"
+     ]
+    },
+    {
+     "s": "arts",
+     "k": "read",
+     "r": "us",
+     "t": "Gee’s Bend Quilts: Objects of Cultural Identity in the American South",
+     "src": "TheCollector",
+     "u": "https://www.thecollector.com/gees-bend-quilts-american-south-cultural-identity/",
+     "b": "The quilters of Gee’s Bend, a small Alabama community, passed their craft from mothers to daughters from before emancipation, and in 1966 several joined the Freedom Quilting Bee to build economic independence. Domestic craft as art, and as freedom.",
+     "w": "A quilt is a household object and a masterpiece at the same time. Both are true and neither needs to apologise.",
+     "i": "you believe the thing made for the bed can hang in the gallery.",
+     "g": [
+      "quilts",
+      "textiles",
+      "art",
+      "feminism",
+      "domestic-history"
+     ]
+    },
+    {
+     "s": "arts",
+     "k": "read",
+     "r": "uk",
+     "t": "Worn: The Life Within Clothes",
+     "src": "Exhibiting Fashion, London College of Fashion, on the show at Manchester Art Gallery",
+     "u": "https://fashionexhibitionmaking.arts.ac.uk/worn-the-life-within-clothes/",
+     "b": "Over forty garments from Manchester’s dress collection, from the 18th century to recent acquisitions, grouped into “material stories” about paisley, cotton, silk and patchwork. There are mended, altered and customised pieces, plus wartime Make Do and Mend clothes. The exhibition runs at Manchester Art Gallery until February 2028, so you have time to plan a visit.",
+     "w": "A mended thing is a thing somebody wanted to keep. We find that deeply moving.",
+     "i": "you keep a cardigan going out of sheer affection, or fancy a trip to Manchester.",
+     "g": [
+      "clothes",
+      "textiles",
+      "mending",
+      "exhibitions"
+     ]
+    },
+    {
+     "s": "curiosities",
+     "k": "read",
+     "r": "uk",
+     "t": "Warding Off Evil With Witch Marks",
+     "src": "National Trust",
+     "u": "https://www.nationaltrust.org.uk/features/witch-marks-these-marks",
+     "b": "Daisy wheels, six-petalled marks drawn with a compass, were thought to trap demons, because a demon that saw a line would follow it round and round and get stuck. Then there’s the rare Auseklis cross, a “sky” symbol linked to stars, believed to banish evil because starlight drove back the dark.",
+     "w": "Scratch a little protection by the hearth. Your great-great-grandmothers would have understood.",
+     "i": "you’d like to look at the beams in your own house with fresh eyes.",
+     "g": [
+      "witch-marks",
+      "folklore",
+      "house-protection",
+      "halloween",
+      "witches"
+     ],
+     "p": 1,
+     "pn": "Start here."
+    },
+    {
+     "s": "curiosities",
+     "k": "read",
+     "r": "uk",
+     "t": "Witch Markings and Magic in Old Buildings",
+     "src": "Shakespeare Birthplace Trust",
+     "u": "https://www.shakespeare.org.uk/explore-shakespeare/blogs/witch-markings-magic-old-buildings/",
+     "b": "There’s a pair of daisy wheels at the top of the cellar stairs at Shakespeare’s Birthplace, probably added after 1600 by a publican, perhaps to protect the beer. Tadpole-shaped burn marks on old timbers may have been made on purpose, with candles. The author is cautious, but finds the research “pretty compelling”.",
+     "w": "Even the pub cellar got a little spell. Very sensible.",
+     "i": "you like to know who looked after the beer in 1600.",
+     "g": [
+      "witch-marks",
+      "folklore",
+      "house-protection",
+      "halloween",
+      "house-museums"
+     ]
+    },
+    {
+     "s": "curiosities",
+     "k": "read",
+     "r": "us",
+     "t": "The DIY Carvings Designed to Deter 17th-Century Witches",
+     "src": "Atlas Obscura",
+     "u": "https://www.atlasobscura.com/articles/apotropaic-witches-marks-carvings",
+     "b": "The commonest mark is the daisy wheel, or hexafoil, an interlocking pattern meant to keep malevolent spirits looping endlessly instead of heading deeper into the house. Some Tudor homeowners carved a Marian “VV” for Virgin of Virgins, often near their valuables. Home security, but make it folklore.",
+     "w": "Before the doorbell camera, there was a compass and a bit of determination.",
+     "i": "you’d like a very good rabbit hole for Hallowe’en morning.",
+     "g": [
+      "witch-marks",
+      "folklore",
+      "house-protection",
+      "halloween"
+     ]
+    },
+    {
+     "s": "curiosities",
+     "k": "read",
+     "r": "us",
+     "t": "Join an English Scavenger Hunt for Spooky, Supernatural Scratches",
+     "src": "Smithsonian Magazine",
+     "u": "https://www.smithsonianmag.com/smart-news/join-english-scavenger-hunt-spooky-supernatural-scratches-180960945/",
+     "b": "Historic England once asked the public, around Hallowe’en, to report protective carvings on churches, barns and homes, since they’re so poorly documented. The marks include invocations of the Virgin Mary, pentacles and daisy wheels. Citizen science, with a torch.",
+     "w": "Look up, look down, look behind the door. A house is still telling you things.",
+     "i": "you’re ready to spend a Saturday peering at barn doors.",
+     "g": [
+      "witch-marks",
+      "folklore",
+      "halloween",
+      "house-protection"
+     ]
+    },
+    {
+     "s": "curiosities",
+     "k": "browse",
+     "r": "uk",
+     "t": "Concealed Shoes (and the Northampton Index)",
+     "src": "Wikipedia",
+     "u": "https://en.wikipedia.org/wiki/Concealed_shoes",
+     "b": "Single worn shoes turn up in chimneys, under floors and in roof spaces across Europe and beyond, probably hidden as charms against witches and demons. Northampton Museum has kept an index of the finds: more than 1,100 reports by 1998 and about 1,900 by 2012, nearly half of them from the 19th century. The chimney or hearth is the commonest hiding place, at 26.2 per cent.",
+     "w": "A single shoe up the chimney is a note from somebody in the past. We’ll never read the whole thing, but we like it.",
+     "i": "you suspect your own house is hiding something small.",
+     "g": [
+      "folklore",
+      "house-protection",
+      "collections",
+      "halloween",
+      "archives"
+     ]
+    },
+    {
+     "s": "curiosities",
+     "k": "read",
+     "r": "world",
+     "t": "The Ancient Protective Magic of Hidden Shoes",
+     "src": "Guinness World Records",
+     "u": "https://www.guinnessworldrecords.com/news/2026/10/the-ancient-protective-magic-of-hidden-shoes",
+     "b": "For roughly five centuries, households in the UK and other English-speaking countries tucked old shoes into walls, under floors and up chimneys, probably as folk protection against evil spirits. Museums have documented more than three thousand finds, and nobody quite knows why.",
+     "w": "Three thousand shoes and not one explanation. We love a mystery that smells faintly of leather.",
+     "i": "you want a story to tell over dinner tonight.",
+     "g": [
+      "folklore",
+      "house-protection",
+      "halloween",
+      "wonder"
+     ]
+    },
+    {
+     "s": "curiosities",
+     "k": "read",
+     "r": "uk",
+     "t": "Concealed Shoes in Buildings, by June Swann",
+     "src": "Apotropaios",
+     "u": "https://apotropaios.co.uk/concealed-shoes---an-article-by-june-swann.html",
+     "b": "The scholar who spent decades studying concealed shoes sets out what she found, with dates, locations and inscriptions of the kind that make you want to take a torch up the loft. A proper deep dive for the person who’s decided this is now their hobby.",
+     "w": "Be the person who knows why there’s a boot in the wall. Parties will improve.",
+     "i": "you’ve read the other shoe articles and need to go deeper.",
+     "g": [
+      "folklore",
+      "house-protection",
+      "archives",
+      "wonder"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "uk",
+     "t": "Slightly Foxed Podcast, Episode 41: Barbara Pym and Other Excellent Women",
+     "src": "Slightly Foxed",
+     "u": "https://foxedquarterly.com/podcast/episode-41-barbara-pym-and-other-excellent-women/",
+     "b": "A cosy half-hour on Barbara Pym, the Austen-like novelist who was nominated for the Booker Prize and who noticed everything. The site says every Slightly Foxed episode can be heard in full, free.",
+     "w": "Pym understood that a parish tea can hold more drama than a battlefield.",
+     "i": "you want to be reminded why you love Pym, or to be talked into starting.",
+     "g": [
+      "podcasts",
+      "books",
+      "domestic-fiction",
+      "overlooked-women",
+      "cosy"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "uk",
+     "t": "Backlisted, Episode 109: Barbara Pym, Excellent Women",
+     "src": "Backlisted",
+     "u": "https://www.backlisted.fm/episodes/109-barbara-pym-excellent-women",
+     "b": "The Backlisted hosts talk about Excellent Women (1952) with two people who look after literary estates at Curtis Brown Heritage, and ask them to pitch overlooked books to today’s readers. A warm and bookish episode with a very long reading list at the end.",
+     "w": "A book about a quiet woman on a quiet street is a book about everything.",
+     "i": "you’d like to eavesdrop on clever people being enthusiastic about a novel.",
+     "g": [
+      "podcasts",
+      "books",
+      "domestic-fiction",
+      "overlooked-women"
+     ],
+     "p": 1
+    },
+    {
+     "s": "wireless",
+     "k": "browse",
+     "r": "uk",
+     "t": "The National Trust Podcasts",
+     "src": "National Trust",
+     "u": "https://nationaltrust.org.uk/podcasts",
+     "b": "A whole shelf of listening about the houses, gardens, collections and landscapes the Trust cares for. There are literary and garden playlists, the 125 Treasures series, Back When for history, and Bettany Hughes and Clare Balding series too. Pick the one that matches your kettle.",
+     "w": "A good podcast is a country house tour you can do in your slippers.",
+     "i": "you’d like a stately home in your ears while you chop the onions.",
+     "g": [
+      "podcasts",
+      "house-museums",
+      "gardens",
+      "country-houses"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "uk",
+     "t": "The English Heritage Podcast",
+     "src": "English Heritage",
+     "u": "https://podcasts.apple.com/zw/podcast/the-english-heritage-podcast/id1156861002",
+     "b": "Stories from the sites English Heritage looks after, from houses and castles to the people who lived and worked in them. A friendly way to get through the ironing.",
+     "w": "History is just other people’s housekeeping, with better swords.",
+     "i": "you like your history with a view.",
+     "g": [
+      "podcasts",
+      "house-museums",
+      "domestic-history"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "uk",
+     "t": "Gardeners’ Question Time",
+     "src": "BBC Radio 4, on Apple Podcasts",
+     "u": "https://podcasts.apple.com/ca/podcast/gardeners-question-time/id325945259",
+     "b": "A panel of horticultural experts answer gardening questions from a live audience, recorded in a different location each week. Marvellous Sunday-afternoon listening, whether or not you have a garden.",
+     "w": "Nothing is more English, or more reassuring, than a stranger asking about slugs.",
+     "i": "you’d like to feel that somebody, somewhere, has an answer.",
+     "g": [
+      "podcasts",
+      "radio",
+      "gardens",
+      "cosy"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "uk",
+     "t": "A History of the World in 100 Objects",
+     "src": "BBC Radio 4, with Neil MacGregor",
+     "u": "https://podcasts.apple.com/ca/podcast/history-world-in-100-objects/id351096296",
+     "b": "Neil MacGregor, the former British Museum director, traces human history through 100 objects, one per episode, each telling you something about the people who made and used it. Perfect for anyone who thinks a humble thing can tell a whole story.",
+     "w": "Every object in your house has a history. Most are just waiting to be asked.",
+     "i": "you collect small things and suspect they matter.",
+     "g": [
+      "podcasts",
+      "radio",
+      "collections",
+      "domestic-history"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "us",
+     "t": "99% Revisited: 10 Staff Favorite Stories",
+     "src": "99% Invisible",
+     "u": "https://99percentinvisible.org/?p=33751",
+     "b": "To mark ten years of the show, the 99% Invisible team picked their ten favourite episodes about the unnoticed design of everyday things, each with a note on why it’s worth hearing. A fine starter pack for a person who wants to notice more.",
+     "w": "Noticing is half of housekeeping.",
+     "i": "you’ve ever wondered who decided what a doorknob should look like.",
+     "g": [
+      "podcasts",
+      "design",
+      "wonder"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "browse",
+     "r": "us",
+     "t": "BackStory Archive",
+     "src": "Virginia Humanities",
+     "u": "https://backstory.newamericanhistory.org",
+     "b": "The archive of a public-radio history show that ran from 2008 to 2020, with 282 episodes and transcripts. Look for Home Bittersweet Home (on owning the American dream), Three Squares (mealtimes in America) and Rare History Well Done (meat). Years of domestic history, free to dip into.",
+     "w": "How we live is history, even when it’s only supper.",
+     "i": "you want a long list of episodes about kitchens, dinners and homes.",
+     "g": [
+      "podcasts",
+      "radio",
+      "domestic-history",
+      "food-history"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "us",
+     "t": "Hidden Kitchens: About the Series",
+     "src": "NPR, by The Kitchen Sisters",
+     "u": "https://www.npr.org/2004/09/29/4053716/-hidden-kitchens-about-the-series",
+     "b": "A sound-rich NPR series from The Kitchen Sisters and Jay Allison, travelling the U.S. to document how communities gather around food, from street-corner cooking to legendary meals. Warm, odd and very much about people at their stoves.",
+     "w": "Every kitchen holds a secret society, and most of them are run by grandmothers.",
+     "i": "you love hearing how real people feed their people.",
+     "g": [
+      "podcasts",
+      "radio",
+      "kitchens",
+      "food-history",
+      "cooking"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "us",
+     "t": "Gastropod",
+     "src": "Cynthia Graber and Nicola Twilley",
+     "u": "https://gastropod.com/about",
+     "b": "A fortnightly podcast that looks at food through science and history, co-hosted by Cynthia Graber and Nicola Twilley. A good one for the walk to the shops, with plenty of ‘I never knew that’ for the dinner table.",
+     "w": "Everything in the larder has a story, and most of them are surprising.",
+     "i": "you’re curious about where your breakfast came from.",
+     "g": [
+      "podcasts",
+      "food-history",
+      "cooking",
+      "wonder"
+     ]
+    },
+    {
+     "s": "wireless",
+     "k": "listen",
+     "r": "us",
+     "t": "The Splendid Table",
+     "src": "American Public Media, hosted by Francis Lam",
+     "u": "https://podcasts.apple.com/ca/podcast/the-splendid-table-conversations-recipes-for-curious/id86997870",
+     "b": "A weekly food show from American Public Media that mixes cooking, recipes and conversations about how food connects with culture, history and science. Guests range from chefs and cookbook authors to scientists and poets.",
+     "w": "A conversation about supper is rarely only about supper.",
+     "i": "you cook for pleasure and like hearing others talk about it.",
+     "g": [
+      "podcasts",
+      "cooking",
+      "recipes",
+      "food-writing"
+     ]
+    }
+   ],
+   "house": "It is 31 October, All Hallows’ Eve. Tomorrow is All Saints’ and the day after is All Souls’, so three days of remembering begin tonight.",
+   "own": {
+    "t": "Housekeeping as a Creative Discipline",
+    "u": "https://brocantealison.substack.com/p/housekeeping-as-creative-discipline",
+    "line": "If the cellar and the chimney have made you want to tidy, start here."
+   },
+   "ask": "Which room in your house has the best light after dark, and when did you last sit in it?"
+  },
+  {
+   "id": "2026-09-05",
+   "type": "backfile",
+   "label": "Back File II",
+   "title": "The Reading Trail: Pym, Persephone and Other Excellent Women",
+   "kicker": "A shelf of comfort reading, from the monthly Gazette.",
+   "letter": [
+    "A trail of books and houses that grew out of the monthly BrocanteHome Gazette: the quiet novelists, the draughty castle and the Manchester house where a Victorian novelist ran a household. Pour something warm and start with whichever title sounds like a friend."
+   ],
+   "pencil": "Reading is also housekeeping, for the mind.",
+   "wonder": "Elizabeth Gaskell wrote in a house she also had to run: dinners, children, visitors and a Unitarian minister husband, all at 84 Plymouth Grove. You can now visit it.",
+   "trail": null,
+   "checked": "All of these links open for everyone, free, with no password.",
+   "advises": "Make a list of three, start with the shortest, and let the others wait their turn.",
+   "commonplace": "Which book did you read in a draughty room and never forget?",
+   "items": [
+    {
+     "s": "leader",
+     "k": "read",
+     "r": "uk",
+     "t": "The BrocanteHome Gazette",
+     "src": "BrocanteHome, on Substack",
+     "u": "https://brocantealison.substack.com/p/the-brocantehome-gazette",
+     "b": "The BrocanteHome Gazette itself, home of the Brocante way of life and the thinking behind this Sourcebook.",
+     "w": "Start at the beginning. The editor insists.",
+     "i": "you want to know what all this is for.",
+     "g": [
+      "essays",
+      "substack",
+      "commonplace"
+     ]
+    },
+    {
+     "s": "arts",
+     "k": "visit",
+     "r": "uk",
+     "t": "Iris Murdoch amongst the Artists",
+     "src": "University of Chichester",
+     "u": "https://www.chi.ac.uk/event/iris-murdoch-amongst-the-artists/",
+     "b": "A free exhibition at the University of Chichester, running 14 August to 10 December 2026, on the novelist and the artists who surrounded her. Mind, house and studio, all together.",
+     "w": "A rich inner life is generally also a messy desk. We’re comfortable with that.",
+     "i": "you’re near the south coast and have an afternoon spare.",
+     "g": [
+      "exhibitions",
+      "free",
+      "art",
+      "overlooked-women"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "book",
+     "r": "uk",
+     "t": "Excellent Women by Barbara Pym",
+     "src": "Penguin Random House",
+     "u": "https://www.penguinrandomhouse.com/books/299909/excellent-women-by-barbara-pym/",
+     "b": "Mildred Lathbury, spinster, church-helper and tea-maker, observes everyone else’s dramas with unmatched wit. The page has the description and reviews; the book is the real treat.",
+     "w": "If you only read one novel about a church jumble sale, make it this one.",
+     "i": "you want to meet the patron saint of capable women.",
+     "g": [
+      "books",
+      "domestic-fiction",
+      "overlooked-women",
+      "cosy"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "essay",
+     "r": "uk",
+     "t": "Whom Should You Read after Dodie Smith? I Say Elizabeth Goudge",
+     "src": "Mirabile Dictu",
+     "u": "https://mirabiledictu.org/2018/09/13/whom-should-you-read-after-dodie-smith-i-say-elizabeth-goudge/",
+     "b": "A reader’s case for moving from Dodie Smith to Elizabeth Goudge, with the warmth of a friend recommending their favourite shelf. A lovely thread to pull.",
+     "w": "Reading recommendations are small acts of friendship.",
+     "i": "you’ve finished your last comfort read and need the next.",
+     "g": [
+      "books",
+      "domestic-fiction",
+      "comfort-reading",
+      "essays"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "book",
+     "r": "uk",
+     "t": "I Capture the Castle by Dodie Smith",
+     "src": "Book Trust",
+     "u": "https://www.booktrust.org.uk/book/i/i-capture-the-castle/",
+     "b": "Cassandra Mortmain lives in a draughty castle and writes about it in her journal, balanced on a kitchen sink. A page with the plot, age ratings and author biography.",
+     "w": "A leaky house with a good heroine is still a very good house.",
+     "i": "you’d like to be seventeen again, with a better notebook.",
+     "g": [
+      "books",
+      "domestic-fiction",
+      "comfort-reading",
+      "cosy"
+     ]
+    },
+    {
+     "s": "reading",
+     "k": "essay",
+     "r": "uk",
+     "t": "Famous for Not Being Famous: A Great Writer with a Glamorous Name",
+     "src": "The Irish Times",
+     "u": "https://www.irishtimes.com/culture/books/famous-for-not-being-famous-a-great-writer-with-a-glamorous-name-1.1725780",
+     "b": "On the novelist Elizabeth Taylor (not that one), a master of quiet English domestic fiction. An invitation to read the writer your mother probably knew about.",
+     "w": "The best-kept secrets in literature are often on the shelf next to the Pyms.",
+     "i": "you like your novels quiet and your sentences exact.",
+     "g": [
+      "books",
+      "domestic-fiction",
+      "overlooked-women",
+      "essays"
+     ]
+    },
+    {
+     "s": "sanctuary",
+     "k": "visit",
+     "r": "uk",
+     "t": "Elizabeth Gaskell’s House, Manchester",
+     "src": "Elizabeth Gaskell’s House",
+     "u": "https://elizabethgaskellhouse.co.uk/?p=112",
+     "b": "The restored Victorian home at 84 Plymouth Grove where Gaskell wrote, entertained and kept house. The About page gives you the history and the visiting information.",
+     "w": "She ran a household, a family and a literary career. The washing-up is not mentioned in the biography.",
+     "i": "you like your literary history to come with a kitchen.",
+     "g": [
+      "house-museums",
+      "writers-homes",
+      "victorian",
+      "sanctuary"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-08-06",
+   "type": "backfile",
+   "label": "Back File I",
+   "title": "Housekeeping as Creative Discipline: A Reading Trail",
+   "kicker": "A trail of articles and museums around the essay where this all began.",
+   "letter": [
+    "From the BrocanteHome essay on housekeeping as a creative discipline comes this trail: a 1969 art manifesto about maintenance, two London museum pieces, the servants’ halls of the National Trust and Mrs Beeton herself, free to read. Keep a notebook handy."
+   ],
+   "pencil": "Maintenance is also a kind of making.",
+   "wonder": "Mierle Laderman Ukeles wrote her Manifesto for Maintenance Art in 1969, and turned washing, dusting and the daily upkeep of things into art. She asked, in effect, who keeps it all going once the revolution is over?",
+   "trail": null,
+   "checked": "All of these links open for everyone, free, with no password.",
+   "advises": "Pick one chore tomorrow and do it as slowly and beautifully as you can manage.",
+   "commonplace": "Write down one thing you maintain that nobody notices.",
+   "items": [
+    {
+     "s": "leader",
+     "k": "essay",
+     "r": "uk",
+     "t": "Housekeeping as Creative Discipline",
+     "src": "BrocanteHome, on Substack",
+     "u": "https://brocantealison.substack.com/p/housekeeping-as-creative-discipline",
+     "b": "The essay this Sourcebook grew from, on keeping a home as a creative practice.",
+     "w": "Dust is, among other things, evidence of a life.",
+     "i": "you’ve ever suspected your housework was a kind of art.",
+     "g": [
+      "housekeeping",
+      "creative-discipline",
+      "essays",
+      "substack"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "us",
+     "t": "Manifesto for Maintenance Art, 1969!",
+     "src": "Ronald Feldman Gallery, on Mierle Laderman Ukeles",
+     "u": "https://feldmangallery.com/exhibition/manifesto-for-maintenance-art-1969",
+     "b": "In 1969 the artist Mierle Laderman Ukeles wrote a manifesto putting maintenance (the washing, the mending, the keeping-going) at the centre of art. This is the gallery’s page on the manifesto and the work it led to.",
+     "w": "She asked: after the revolution, who’s going to pick up the garbage on Monday morning? We’d like to second that.",
+     "i": "you’ve ever resented the laundry and loved it in the same hour.",
+     "g": [
+      "housekeeping",
+      "art",
+      "feminism",
+      "creative-discipline"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "uk",
+     "t": "Making Home: Labour, Memory, and Belonging at the Museum of the Home",
+     "src": "This Is Looking Forward, on Substack",
+     "u": "https://thisislookingforward.substack.com/p/making-home-labour-memory-and-belonging",
+     "b": "A thoughtful review of London’s Home Galleries, covering caregiving, LGBTQ+ history, multicultural domestic display and feminist critiques of unpaid housework. The house as something you build through daily practice.",
+     "w": "Home isn’t just a place; it’s something we make, by hand, every day.",
+     "i": "you’d like to think about the invisible work that holds a household together.",
+     "g": [
+      "housekeeping",
+      "house-museums",
+      "feminism",
+      "domestic-history",
+      "essays"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "uk",
+     "t": "The Stories Embedded in the Design of Homes",
+     "src": "Creative Review",
+     "u": "https://www.creativereview.co.uk/museum-home-london-design/",
+     "b": "On the reopened Museum of the Home (formerly the Geffrye), where personal and social stories show how household design and technology have changed. A thoughtful reviewer who also notes where the galleries work less well.",
+     "w": "Every object in a house was once somebody’s decision.",
+     "i": "you’re planning a London museum day.",
+     "g": [
+      "house-museums",
+      "design",
+      "domestic-history",
+      "interiors"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "browse",
+     "r": "uk",
+     "t": "Museum of the Home Collections",
+     "src": "Museum of the Home, London",
+     "u": "https://www.museumofthehome.org.uk/explore/our-collections",
+     "b": "About 40,000 household objects, archives, photographs and books dating from 1600 to today, with an online database of more than 7,000 objects and 6,000 books to search. A rabbit hole with excellent chairs.",
+     "w": "Spend twenty minutes in the database and you’ll want to rearrange your cupboards.",
+     "i": "you’re curious about what people kept in their sitting rooms in 1750.",
+     "g": [
+      "collections",
+      "archives",
+      "domestic-history",
+      "house-museums"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "uk",
+     "t": "Discover the Lives of Servants Below Stairs",
+     "src": "National Trust",
+     "u": "https://www.nationaltrust.org.uk/lists/get-a-taste-of-life-below-stairs",
+     "b": "Servants’ kitchens, pantries and bedrooms at National Trust houses across England, Wales and Northern Ireland, with stories of the staff who kept the great houses running. Where the real housekeeping happened.",
+     "w": "The great house only worked because somebody got up at five to light the range.",
+     "i": "you’ve watched every below-stairs drama and want the real thing.",
+     "g": [
+      "servants",
+      "house-museums",
+      "domestic-history",
+      "kitchens"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "read",
+     "r": "uk",
+     "t": "The Best Kitchens at the National Trust",
+     "src": "National Trust",
+     "u": "https://www.nationaltrust.org.uk/visit/houses-buildings/the-best-historic-kitchens",
+     "b": "Dunster Castle’s Blue Kitchen, Penrhyn’s Victorian kitchen, Tredegar’s Great Kitchen and Cragside’s labour-saving kitchen: a tour of historic kitchens, with stories of the cooks and maids who worked in them.",
+     "w": "A copper pan collection is a form of portraiture.",
+     "i": "you’d like to see where the pudding was made.",
+     "g": [
+      "kitchens",
+      "servants",
+      "house-museums",
+      "domestic-history"
+     ]
+    },
+    {
+     "s": "household",
+     "k": "book",
+     "r": "uk",
+     "t": "The Book of Household Management by Mrs Beeton (free to read)",
+     "src": "Project Gutenberg",
+     "u": "https://gutenberg.org/ebooks/10136",
+     "b": "Mrs Beeton’s 1861 Victorian guide, covering cookery, household duties, medical advice and the management of servants, free to read online. Read it for the recipes, the rules, and the astonishing confidence.",
+     "w": "Isabella Beeton wrote it in her twenties. Reader, be inspired.",
+     "i": "you’d like the original, which is both a manual and a monument.",
+     "g": [
+      "books",
+      "free-to-read",
+      "victorian",
+      "housekeeping",
+      "domestic-history"
+     ]
+    }
+   ]
+  }
+ ]
+}
+</script>
+
+<script>
+/* ---- PURE: data, formatting, search ---- */
+const DATA = JSON.parse(document.getElementById('gazette-data').textContent);
+const TAGS = DATA.tags;
+const SECTIONS = DATA.sections.slice();
+/* the editor's running order: Midlife comes straight after the Leader */
+(function(){var i = SECTIONS.findIndex(function(s){return s.slug === 'midlife';}); if(i > 1){SECTIONS.splice(1, 0, SECTIONS.splice(i, 1)[0]);}})();
+const secBy = {}; SECTIONS.forEach(s => secBy[s.slug] = s);
+const KINDS = {read:'Read',watch:'Watch',listen:'Listen',visit:'Visit',browse:'Browse',book:'Book',essay:'Essay'};
+const REGIONS = {uk:'United Kingdom', us:'United States', world:'Further afield'};
+const REGION_WORDS = {uk:'uk britain british england english', us:'usa us america american', world:'world abroad australia'};
+const DIP = {browse:'A quick dip', visit:'A quick dip', read:'A cup of tea', essay:'A cup of tea', listen:'A cup of tea', book:'A long afternoon', watch:'A long afternoon'};
+const DIPK = {browse:'quick', visit:'quick', read:'tea', essay:'tea', listen:'tea', book:'long', watch:'long'};
+const IF_LABEL = {read:'Read if',watch:'Watch if',listen:'Listen if',visit:'Visit if',browse:'Browse if',book:'Read if',essay:'Read if'};
+const TWO_COL = {wireless:true, curiosities:true};
+const NUM = ['No','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve'];
+const ISSUES = DATA.issues.slice().sort((a,b) => b.id.localeCompare(a.id));
+const ITEMS = [];
+const SEEN = {};
+ISSUES.forEach(is => is.items.forEach((it,n) => {
+  let id = is.id + '-' + slug(it.t);
+  if(SEEN[id]) id += '-' + n;
+  SEEN[id] = 1;
+  ITEMS.push(Object.assign({}, it, {issue:is, n:n, id:id}));
+}));
+
+function esc(s){return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function fold(s){return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[’‘']/g,'');}
+function words(s){return fold(s).split(/[^a-z0-9]+/).filter(Boolean);}
+function slug(s){return fold(s).replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,48).replace(/-+$/,'');}
+function tagLabel(g){return TAGS[g] || g;}
+function fmtDate(iso, o){return new Date(iso + 'T12:00:00Z').toLocaleDateString('en-GB', Object.assign({timeZone:'UTC'}, o));}
+function longDate(iso){return fmtDate(iso, {weekday:'long', day:'numeric', month:'long', year:'numeric'});}
+function shortDate(iso){return fmtDate(iso, {day:'numeric', month:'short', year:'numeric'});}
+function issueRef(is){return is.type === 'backfile' ? is.label : 'Vol. I, ' + is.label;}
+function safeUrl(u){return /^https:\/\//.test(u) ? u : '#';}
+function isFree(it){return it.g.indexOf('free') > -1 || it.g.indexOf('free-to-read') > -1;}
+function freeLabel(it){return it.g.indexOf('free') > -1 ? 'Free to visit' : 'Free to read';}
+
+function within1(a,b){
+  if(a===b) return true;
+  const la=a.length, lb=b.length;
+  if(Math.abs(la-lb) > 1) return false;
+  let i=0, j=0, edits=0;
+  while(i<la && j<lb){
+    if(a[i]===b[j]){i++; j++; continue;}
+    if(++edits > 1) return false;
+    if(la===lb){i++; j++;} else if(la>lb){i++;} else {j++;}
+  }
+  if(i<la || j<lb) edits++;
+  return edits <= 1;
+}
+function fieldsFor(it){
+  return [
+    {w:5, t:words(it.t)},
+    {w:4, t:words(it.g.map(tagLabel).join(' '))},
+    {w:3, t:words(secBy[it.s].name + ' ' + KINDS[it.k])},
+    {w:3, t:words(REGION_WORDS[it.r] || '')},
+    {w:2, t:words(it.src)},
+    {w:1, t:words([it.b, it.w, it.i].join(' '))}
+  ];
+}
+function termScore(term, fields, fuzzy){
+  let best = 0;
+  for(const f of fields){
+    let m = 0;
+    for(const w of f.t){
+      let s = 0;
+      if(w===term) s = 1;
+      else if(term.length>=2 && w.startsWith(term)) s = .8;
+      else if(term.length>=4 && w.includes(term)) s = .5;
+      else if(fuzzy && term.length>=5 && within1(term,w)) s = .4;
+      if(s > m) m = s;
+      if(m === 1) break;
+    }
+    if(m * f.w > best) best = m * f.w;
+  }
+  return best;
+}
+function runSearch(q, flt){
+  const terms = words(q);
+  const pool = ITEMS.filter(it => (!flt.s || it.s===flt.s) && (!flt.k || it.k===flt.k) && (!flt.g || it.g.includes(flt.g)) && (!flt.r || it.r===flt.r) && (!flt.free || isFree(it)));
+  if(!terms.length) return {terms, res: pool.map(it => ({it, score:0}))};
+  const pass = fuzzy => {
+    const out = [];
+    for(const it of pool){
+      const f = it._f || (it._f = fieldsFor(it));
+      let tot = 0, ok = true;
+      for(const t of terms){const s = termScore(t, f, fuzzy); if(!s){ok=false; break;} tot += s;}
+      if(ok) out.push({it, score:tot});
+    }
+    return out;
+  };
+  let out = pass(false);
+  if(!out.length) out = pass(true);
+  out.sort((a,b) => b.score-a.score || b.it.issue.id.localeCompare(a.it.issue.id) || a.it.n-b.it.n);
+  return {terms, res: out};
+}
+function makeRe(terms){
+  if(!terms.length) return null;
+  try{return new RegExp('(?<![\\p{L}\\p{N}])(?:' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|') + ')', 'giu');}
+  catch(e){return null;}
+}
+function hl(text, re){
+  if(!re) return esc(text);
+  let out = '', last = 0, m;
+  re.lastIndex = 0;
+  while((m = re.exec(text)) !== null){
+    if(m[0].length === 0){re.lastIndex++; continue;}
+    out += esc(text.slice(last, m.index)) + '<mark>' + esc(m[0]) + '</mark>';
+    last = m.index + m[0].length;
+  }
+  return out + esc(text.slice(last));
+}
+/* ---- END PURE ---- */
+
+(function(){
+const view = document.getElementById('view');
+const qEl = document.getElementById('q');
+const jb = document.getElementById('jumpbar');
+const tt = document.getElementById('totop');
+const root = document.documentElement;
+const state = {r:'', t:'', k:'', free:false};
+const sstate = {q:'', s:'', k:'', g:'', r:'', c:'', sort:'rel'};
+let route = 'today', curPresent = null, booted = false, lastPick = null;
+
+/* ---- per-viewer conveniences (saved shelf, theme, text size) ---- */
+const mem = {};
+function sget(k){try{return localStorage.getItem(k);}catch(e){return mem[k] || null;}}
+function sset(k,v){try{localStorage.setItem(k,v);}catch(e){mem[k] = v;}}
+let shelf = [];
+try{const p = JSON.parse(sget('bh-shelf') || '[]'); if(Array.isArray(p)) shelf = p.filter(x => typeof x === 'string');}catch(e){}
+function isSaved(id){return shelf.indexOf(id) > -1;}
+function syncShelf(){const n = document.getElementById('shelfn'); if(n) n.textContent = shelf.length ? ' (' + shelf.length + ')' : '';}
+
+const SIZES = [100, 112, 125];
+let sizeI = Math.max(0, SIZES.indexOf(parseInt(sget('bh-size') || '100', 10)));
+function applySize(){root.style.fontSize = SIZES[sizeI] + '%';}
+(function(){const t = sget('bh-theme'); if(t === 'dark' || t === 'light') root.setAttribute('data-theme', t);})();
+applySize();
+
+/* ---- small renderers ---- */
+function icon(slug, alt){return '<svg class="ic' + (alt ? ' alt' : '') + '" aria-hidden="true"><use href="#ic-' + esc(slug) + '"/></svg>';}
+function pagehead(title, p){return '<div class="pagehead"><h1>' + esc(title) + '</h1>' + (p ? '<p>' + p + '</p>' : '') + '</div>';}
+function tagCounts(){
+  const c = {};
+  ITEMS.forEach(it => it.g.forEach(g => c[g] = (c[g]||0) + 1));
+  return c;
+}
+function itemHTML(it, re, o){
+  o = o || {};
+  const saved = isSaved(it.id);
+  const tags = it.g.map(g => '<a href="#tag-' + esc(g) + '">' + esc(tagLabel(g)) + '</a>').join('<span aria-hidden="true"> · </span>');
+  const length = it.min ? esc(it.min) + ' min' : DIP[it.k];
+  return '<article class="item" id="find-' + esc(it.id) + '">' +
+    '<p class="meta"><span class="kind">' + KINDS[it.k] + '</span>' + (it.e ? '<span class="edit">From the editor’s shelf</span>' : '') + '<span class="reg reg-' + it.r + '">' + (it.r === 'uk' ? 'UK' : it.r === 'us' ? 'USA' : 'Afield') + '</span>' +
+      (isFree(it) ? '<span class="badge">' + freeLabel(it) + '</span>' : '') +
+      '<a class="secname" href="#section-' + it.s + '">' + esc(secBy[it.s].name) + '</a></p>' +
+    '<h3><a href="' + esc(safeUrl(it.u)) + '" target="_blank" rel="noopener noreferrer">' + hl(it.t, re) + '<span class="vh"> (opens in a new tab)</span></a></h3>' +
+    '<p class="src">' + hl(it.src, re) + ' · <span class="dip">' + length + '</span></p>' +
+    (it.pn ? '<p class="pn">' + esc(it.pn) + '</p>' : '') +
+    '<p class="blurb">' + hl(it.note || it.b, re) + '</p>' +
+    '<p class="way"><span>The Brocante way</span>' + hl(it.w, re) + '</p>' +
+    '<p class="if"><b>' + IF_LABEL[it.k] + ':</b> ' + hl(it.i, re) + '</p>' +
+    '<div class="acts">' +
+      '<button type="button" class="act" data-save="' + esc(it.id) + '" aria-pressed="' + saved + '"><svg aria-hidden="true"><use href="#heart"/></svg><span class="lbl">' + (saved ? 'Saved' : 'Save') + '</span></button>' +
+      '<button type="button" class="act" data-share="' + esc(it.id) + '"><span class="lbl">Share</span></button>' +
+      '<details class="tagd"><summary>Tags</summary><p class="tags">' + tags + '</p></details>' +
+      '<span class="chk">Link checked ' + shortDate(it.c || it.issue.id) + '</span>' +
+    '</div>' +
+    (o.from ? '<p class="from"><a href="#issue-' + it.issue.id + '">' + esc(issueRef(it.issue)) + ', ' + shortDate(it.issue.id) + '</a></p>' : '') +
+    '</article>';
+}
+function gridHTML(items, re, one, o){return '<div class="grid' + (one ? ' one' : '') + '">' + items.map(it => itemHTML(it, re, o)).join('') + '</div>';}
+
+function chips(label, key, opts, cur){
+  return '<div class="regbar" role="group" aria-label="' + esc(label) + '"><span>' + esc(label) + '</span>' +
+    opts.map(x => '<button type="button" data-f="' + key + '" data-v="' + esc(x[0]) + '" aria-pressed="' + (cur === x[0]) + '">' + esc(x[1]) + '</button>').join('') + '</div>';
+}
+function filterBar(){
+  return '<div class="filters">' +
+    chips('Reading from', 'r', [['','Everywhere'],['uk','UK'],['us','USA'],['world','Further afield']], state.r) +
+    chips('Time to spare', 't', [['','Any'],['quick','A quick dip'],['tea','A cup of tea'],['long','A long afternoon']], state.t) +
+    '<div class="regbar" role="group" aria-label="Show"><span>Show</span>' +
+      '<button type="button" data-f="k" data-v="listen" aria-pressed="' + (state.k === 'listen') + '">Something to listen to</button>' +
+      '<button type="button" data-f="free" data-v="1" aria-pressed="' + state.free + '">Free only</button></div>' +
+    '</div>';
+}
+function keep(it){
+  return (!state.r || it.r === state.r) && (!state.t || DIPK[it.k] === state.t) && (!state.k || it.k === state.k) && (!state.free || isFree(it));
+}
+function hasFilter(){return !!(state.r || state.t || state.k || state.free);}
+
+function issueHTML(is){
+  const mine = ITEMS.filter(it => it.issue === is && keep(it));
+  const bySec = {};
+  mine.forEach(it => (bySec[it.s] = bySec[it.s] || []).push(it));
+  const present = SECTIONS.filter(s => bySec[s.slug]);
+  curPresent = present;
+  const total = mine.length;
+  const idx = ISSUES.indexOf(is);
+  const newer = ISSUES[idx-1], older = ISSUES[idx+1];
+  let h = '<header class="ihead"><p class="no">' + esc(issueRef(is)) + ' · ' + esc(longDate(is.id)) + '</p><h1>' + esc(is.title) + '</h1><p class="kick">' + esc(is.kicker) + '</p>' +
+    (is.house ? '<p class="house"><span>Today in the house</span>' + esc(is.house) + '</p>' : '') +
+    fromAlisonHTML() +
+    '<p class="tally">' + total + (total === 1 ? ' find' : ' finds') + (hasFilter() ? ' to suit you' : ' to read this morning') + '</p>' + filterBar() + '</header>';
+  h += '<div class="front"><section class="letter" aria-labelledby="lt"><p class="label" id="lt">The Leader: letter from the editor</p>' +
+       is.letter.map(p => '<p>' + esc(p) + '</p>').join('') +
+       '<p class="pencil"><small>In the margin, red pencil</small>' + esc(is.pencil) +
+       '<svg class="scribble" viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 8 C40 2 70 11 110 5 S170 3 198 7"/></svg></p></section>';
+  h += '<aside class="index" aria-labelledby="ix"><p class="label" id="ix">In this issue</p><ul>' +
+       present.map(s => '<li><button type="button" data-jump="' + s.slug + '"><span>' + esc(s.name) + '</span><span class="n">' + bySec[s.slug].length + '</span></button></li>').join('') +
+       '</ul></aside></div>';
+  if(is.wonder || is.trail){
+    h += '<div class="extras">';
+    if(is.wonder) h += '<section class="wonder" aria-labelledby="sw"><p class="label" id="sw">Small Wonder</p><p>' + esc(is.wonder) + '</p></section>';
+    if(is.trail){
+      const steps = is.trail.steps.map(st => {const f = is.items.find(x => x.t === st.t); return f ? '<li><a href="' + esc(safeUrl(f.u)) + '" target="_blank" rel="noopener noreferrer">' + esc(st.t) + '</a><span>' + esc(st.line) + '</span></li>' : '';}).join('');
+      h += '<section class="trail" aria-labelledby="rh"><p class="label" id="rh">' + esc(is.trail.title) + '</p><ol>' + steps + '</ol></section>';
+    }
+    h += '</div>';
+  }
+  const picks = mine.filter(it => it.p);
+  if(picks.length){
+    h += '<section class="picks" aria-labelledby="pk"><p class="label" id="pk">Today’s picks</p><ol class="pickl">' +
+      picks.map(it => '<li><p class="meta"><span class="kind">' + KINDS[it.k] + '</span><span class="secname">' + esc(secBy[it.s].name) + '</span></p>' +
+        '<h3><a href="' + esc(safeUrl(it.u)) + '" target="_blank" rel="noopener noreferrer">' + esc(it.t) + '<span class="vh"> (opens in a new tab)</span></a></h3>' +
+        '<p class="src">' + esc(it.src) + '</p>' +
+        (it.pn ? '<p class="pn">' + esc(it.pn) + '</p>' : '') +
+        '<p class="way">' + esc(it.w) + '</p>' +
+        '<button type="button" class="act" data-goto="' + esc(it.id) + '">See it on the shelves</button></li>').join('') +
+      '</ol></section>';
+  }
+  if(is.own){
+    h += '<aside class="own" aria-label="From the BrocanteHome shelves"><p class="label">From the BrocanteHome shelves</p><p><a href="' + esc(safeUrl(is.own.u)) + '" target="_blank" rel="noopener noreferrer">' + esc(is.own.t) + '<span class="vh"> (opens in a new tab)</span></a> <span class="ownline">' + esc(is.own.line) + '</span></p></aside>';
+  }
+  if(!total){
+    h += '<p class="notice empty">' + (hasFilter()
+      ? 'Nothing in the house suits those filters this morning. Loosen one and the doors open again.'
+      : 'The shelves are bare this morning. The kettle is on.') + '</p>';
+  } else {
+    h += '<div class="shelves-head"><h2>The Shelves</h2><p>Everything else in this morning’s house, department by department.</p></div>';
+  }
+  present.forEach((s, n) => {
+    h += '<section class="sec" id="sec-' + s.slug + '"><div class="sec-head">' + icon(s.slug, n % 2) + '<h2><a href="#section-' + s.slug + '">' + esc(s.name) + '</a></h2><p>' + esc(s.desc) + '</p></div>' + gridHTML(bySec[s.slug], null, false) + '</section>';
+  });
+  h += '<section class="backpage" aria-label="The back page">' +
+       '<div><p class="label">The Gazette has checked</p><p>' + esc(is.checked) + '</p></div>' +
+       '<div><p class="label">The Gazette advises</p><p>' + esc(is.advises) + '</p></div>' +
+       '<div><p class="label">Today’s commonplace</p><p>' + esc(is.commonplace) + '</p></div>' +
+       (is.ask ? '<div><p class="label">Ask yourself</p><p>' + esc(is.ask) + '</p></div>' : '') + '</section>';
+  h += '<nav class="flip-nav" aria-label="Other issues"><span>' + (older ? '<a href="#issue-' + older.id + '">← ' + esc(issueRef(older)) + ': ' + esc(older.title) + '</a>' : '') + '</span><span>' + (newer ? '<a href="#issue-' + newer.id + '">' + esc(issueRef(newer)) + ': ' + esc(newer.title) + ' →</a>' : '<a href="#archive">All back issues →</a>') + '</span></nav>';
+  return h;
+}
+function renderToday(){
+  const is = ISSUES.find(x => x.type !== 'backfile') || ISSUES[0];
+  const todayStr = new Date().toLocaleDateString('en-CA');
+  let h = '';
+  if(is.id < todayStr) h += '<p class="notice">This morning’s issue is still at the printers. Here’s the most recent one, from ' + esc(longDate(is.id)) + '.</p>';
+  view.innerHTML = h + almanacHTML() + issueHTML(is);
+}
+function renderIssue(id){
+  const is = ISSUES.find(x => x.id === id);
+  if(!is){view.innerHTML = pagehead('That issue isn’t in the house', 'The room you asked for isn’t on this floor. <a href="#archive">Browse every back issue</a>, or <a href="#today">go back to the front door</a>.'); return;}
+  view.innerHTML = issueHTML(is);
+}
+function rowHTML(is){
+  const secs = new Set(is.items.map(i => i.s)).size;
+  return '<a class="row" href="#issue-' + is.id + '"><div class="d"><b>' + fmtDate(is.id, {day:'numeric'}) + '</b><span>' + fmtDate(is.id, {month:'short'}) + '</span></div><div><h3>' + esc(is.title) + '</h3><p class="k">' + esc(is.kicker) + '</p><p class="m">' + esc(issueRef(is)) + ' · ' + is.items.length + ' finds · ' + secs + ' sections</p></div></a>';
+}
+function renderArchive(){
+  const dailies = ISSUES.filter(x => x.type !== 'backfile');
+  const back = ISSUES.filter(x => x.type === 'backfile');
+  let h = pagehead('The Archive', 'Every morning’s issue of the Sourcebook, newest first. The Back Files, at the foot of the page, gather the reading trails from earlier BrocanteHome essays.');
+  let month = '';
+  dailies.forEach(is => {
+    const m = fmtDate(is.id, {month:'long', year:'numeric'});
+    if(m !== month){month = m; h += '<h2 class="month">' + esc(m) + '</h2>';}
+    h += rowHTML(is);
+  });
+  if(back.length){
+    h += '<h2 class="month backfiles">The Back Files</h2><p class="shelfnote">Reading trails from older BrocanteHome essays, filed here so they can be found.</p>';
+    back.forEach(is => {h += rowHTML(is);});
+  }
+  view.innerHTML = h;
+}
+function renderWeek(){
+  const dailies = ISSUES.filter(x => x.type !== 'backfile').slice(0, 7);
+  let h = pagehead('This Week', dailies.length === 1
+    ? 'One issue so far, with its picks. A new one arrives every morning.'
+    : 'The last ' + dailies.length + ' mornings, newest first, with the picks from each.');
+  dailies.forEach(is => {
+    h += rowHTML(is);
+    const picks = ITEMS.filter(it => it.issue === is && it.p);
+    if(picks.length){
+      h += '<ul class="weekp">' + picks.map(it => '<li><span class="kind">' + KINDS[it.k] + '</span> <a href="' + esc(safeUrl(it.u)) + '" target="_blank" rel="noopener noreferrer">' + esc(it.t) + '<span class="vh"> (opens in a new tab)</span></a> <span class="src">' + esc(it.src) + '</span></li>').join('') + '</ul>';
+    }
+  });
+  view.innerHTML = h;
+}
+function renderSections(){
+  const n = SECTIONS.length;
+  let h = pagehead('The Sections', (NUM[n] || n) + ' departments, each one a shelf in the house. Choose one to see everything the Gazette has filed there.') + '<div class="tiles">';
+  SECTIONS.forEach((s, i) => {
+    const c = ITEMS.filter(it => it.s === s.slug).length;
+    h += '<a class="tile" href="#section-' + s.slug + '">' + icon(s.slug, i % 2) + '<h3>' + esc(s.name) + '</h3><p>' + esc(s.desc) + '</p><p class="m">' + c + (c===1 ? ' find' : ' finds') + '</p></a>';
+  });
+  view.innerHTML = h + '</div>';
+}
+function groupedByIssue(items, re){
+  let h = '', cur = null;
+  items.forEach(it => {
+    if(it.issue !== cur){
+      if(cur) h += '</div>';
+      cur = it.issue;
+      h += '<p class="when">' + esc(longDate(cur.id)) + ' · ' + esc(issueRef(cur)) + '</p><div class="grid">';
+    }
+    h += itemHTML(it, re);
+  });
+  return h + (cur ? '</div>' : '');
+}
+function renderSection(slug){
+  const s = secBy[slug];
+  if(!s){view.innerHTML = pagehead('That shelf isn’t in the house', 'Try <a href="#sections">the list of departments</a>.'); return;}
+  const items = ITEMS.filter(it => it.s === slug);
+  view.innerHTML = '<div class="pagehead"><h1>' + icon(slug) + esc(s.name) + '</h1><p>' + esc(s.desc) + ' ' + items.length + (items.length===1 ? ' find' : ' finds') + ' so far.</p></div>' +
+    (items.length ? groupedByIssue(items) : '<p class="notice empty">Nothing has been filed here yet. The Gazette is working on it.</p>');
+}
+function renderTags(){
+  const c = tagCounts();
+  const all = Object.keys(c).sort((a,b) => c[b]-c[a] || tagLabel(a).localeCompare(tagLabel(b)));
+  const main = all.filter(g => c[g] > 1).sort((a,b) => tagLabel(a).localeCompare(tagLabel(b)));
+  const rare = all.filter(g => c[g] === 1).sort((a,b) => tagLabel(a).localeCompare(tagLabel(b)));
+  const li = g => '<li class="' + (c[g] >= 8 ? 'big' : c[g] >= 4 ? 'mid' : '') + '"><a href="#tag-' + esc(g) + '"><span>' + esc(tagLabel(g)) + '</span><span class="n">' + c[g] + '</span></a></li>';
+  view.innerHTML = pagehead('Tags', 'Every find carries tags, so you can follow a thread from one issue to the next. The bigger the tag, the more finds hang on it.') +
+    '<ul class="cloud">' + main.map(li).join('') + '</ul>' +
+    (rare.length ? '<details class="rare"><summary>The rarer tags (' + rare.length + ')</summary><ul class="cloud">' + rare.map(li).join('') + '</ul></details>' : '');
+}
+function renderTag(g){
+  const items = ITEMS.filter(it => it.g.includes(g));
+  if(!items.length){view.innerHTML = pagehead('That thread has gone quiet', 'Nothing is tagged that way yet. <a href="#tags">See every tag</a>.'); return;}
+  view.innerHTML = pagehead(tagLabel(g), items.length + (items.length===1 ? ' find' : ' finds') + ' tagged this way. <a href="#tags">All tags</a>') + groupedByIssue(items);
+}
+function renderShelf(){
+  const items = shelf.slice().reverse().map(id => ITEMS.find(it => it.id === id)).filter(Boolean);
+  let h = pagehead('My Shelf', 'Finds you’ve saved on this device, newest first. They stay until you let them go.');
+  if(!items.length){
+    h += '<p class="notice empty">Your shelf is empty. Press Save on anything that catches your eye and it will wait here for you. It’s kept on this device only, so it won’t follow you to your phone, but you can copy it as a list and take it with you.</p>';
+  } else {
+    h += '<div class="shelftools"><button type="button" class="btn" data-copyshelf="1">Copy my shelf as a list</button><span class="copymsg" id="copymsg" role="status"></span></div>' +
+      '<div class="copybox" id="copybox" hidden><p class="shelfnote">Your browser wouldn’t let us copy for you. Select the list below and copy it yourself.</p><textarea id="copyta" rows="8" readonly></textarea></div>';
+    h += gridHTML(items, null, false, {from:true});
+  }
+  view.innerHTML = h;
+}
+function shelfAsText(){
+  const items = shelf.slice().reverse().map(id => ITEMS.find(it => it.id === id)).filter(Boolean);
+  const d = new Date().toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'});
+  return 'My BrocanteHome Sourcebook shelf, ' + d + '\n\n' + items.map((it, i) => (i + 1) + '. ' + it.t + ' (' + it.src + ')\n   ' + it.u).join('\n\n') + '\n';
+}
+async function copyShelf(){
+  const txt = shelfAsText(), msg = document.getElementById('copymsg'), box = document.getElementById('copybox'), ta = document.getElementById('copyta');
+  let ok = false;
+  try{ await navigator.clipboard.writeText(txt); ok = true; }catch(e){}
+  if(!ok){
+    try{ ta.value = txt; box.hidden = false; ta.focus(); ta.select(); ok = document.execCommand('copy'); if(ok) box.hidden = true; }catch(e){}
+  }
+  if(msg) msg.textContent = ok ? 'Copied. Paste it into your notes or an email.' : '';
+}
+function renderSurprise(){
+  let it;
+  do{it = ITEMS[Math.floor(Math.random() * ITEMS.length)];}while(ITEMS.length > 1 && it.id === lastPick);
+  lastPick = it.id;
+  view.innerHTML = pagehead('Surprise Me', 'One find, picked from the whole house. Take it or leave it.') +
+    '<div class="onefind">' + itemHTML(it, null, {from:true}) + '</div><p class="again"><button type="button" class="btn" data-again="1">Another one</button></p>';
+}
+function renderFind(id){
+  const it = ITEMS.find(x => x.id === id);
+  if(!it){view.innerHTML = pagehead('That find has wandered off', 'It isn’t in the Archive any more. <a href="#today">Start at the front door</a>.'); return;}
+  view.innerHTML = pagehead('A Find from the Sourcebook', 'Shared from the BrocanteHome Sourcebook. <a href="#issue-' + it.issue.id + '">Read the whole issue</a>.') +
+    '<div class="onefind">' + itemHTML(it, null, {from:true}) + '</div>';
+}
+
+/* search view */
+const SUGGEST = ['witch marks','shoes','Shaker','garden','Pym','kitchens','quilts','free to visit','Wharton','cosy films'];
+function opt(v, l, cur){return '<option value="' + esc(v) + '"' + (v===cur ? ' selected' : '') + '>' + esc(l) + '</option>';}
+function renderSearch(){
+  const c = tagCounts();
+  const tagList = Object.keys(c).sort((a,b) => tagLabel(a).localeCompare(tagLabel(b)));
+  const h = pagehead('Search the Sourcebook', 'Titles, tags, sources, sections and the editor’s notes are all searched. A small typo is forgiven.') +
+    '<div class="ctrls">' +
+    '<label for="f-s">Section<select id="f-s">' + opt('', 'All sections', sstate.s) + SECTIONS.map(s => opt(s.slug, s.name, sstate.s)).join('') + '</select></label>' +
+    '<label for="f-r">Region<select id="f-r">' + opt('', 'Everywhere', sstate.r) + opt('uk', 'United Kingdom', sstate.r) + opt('us', 'United States', sstate.r) + opt('world', 'Further afield', sstate.r) + '</select></label>' +
+    '<label for="f-k">Type<select id="f-k">' + opt('', 'Anything', sstate.k) + Object.keys(KINDS).map(k => opt(k, KINDS[k], sstate.k)).join('') + '</select></label>' +
+    '<label for="f-g">Tag<select id="f-g">' + opt('', 'Any tag', sstate.g) + tagList.map(g => opt(g, tagLabel(g), sstate.g)).join('') + '</select></label>' +
+    '<label for="f-c">Cost<select id="f-c">' + opt('', 'Anything', sstate.c) + opt('free', 'Free only', sstate.c) + '</select></label>' +
+    '<label for="f-o">Order<select id="f-o">' + opt('rel', 'Best match', sstate.sort) + opt('new', 'Newest first', sstate.sort) + opt('section', 'By section', sstate.sort) + '</select></label>' +
+    '</div><p class="count" id="count" aria-live="polite"></p><div id="chips"></div><div id="results"></div>';
+  view.innerHTML = h;
+  const map = {'f-s':'s','f-r':'r','f-k':'k','f-g':'g','f-c':'c','f-o':'sort'};
+  Object.keys(map).forEach(id => document.getElementById(id).addEventListener('change', e => {sstate[map[id]] = e.target.value; updateResults();}));
+  updateResults();
+}
+function updateResults(){
+  const box = document.getElementById('results'), cnt = document.getElementById('count'), chp = document.getElementById('chips');
+  if(!box) return;
+  const base = runSearch(sstate.q, {s:'', k:sstate.k, g:sstate.g, r:sstate.r, free:sstate.c === 'free'});
+  const terms = base.terms;
+  const filtered = sstate.s || sstate.k || sstate.g || sstate.r || sstate.c;
+  if(!terms.length && !filtered){
+    cnt.textContent = ''; chp.innerHTML = '';
+    const cs = tagCounts();
+    const top = Object.keys(cs).sort((a,b) => cs[b]-cs[a] || tagLabel(a).localeCompare(tagLabel(b))).slice(0,12);
+    box.innerHTML = '<p class="label">Try asking for</p><div class="try">' + SUGGEST.map(t => '<button type="button" data-q="' + esc(t) + '">' + esc(t) + '</button>').join('') + '</div>' +
+      '<p class="label">Or follow a tag</p><ul class="cloud">' + top.map(g => '<li><a href="#tag-' + esc(g) + '"><span>' + esc(tagLabel(g)) + '</span><span class="n">' + cs[g] + '</span></a></li>').join('') + '</ul>';
+    return;
+  }
+  let list = base.res.slice();
+  const counts = {};
+  list.forEach(r => counts[r.it.s] = (counts[r.it.s] || 0) + 1);
+  const all = list.length;
+  if(sstate.s) list = list.filter(r => r.it.s === sstate.s);
+  chp.innerHTML = all ? '<div class="regbar secchips" role="group" aria-label="Narrow by section"><span>Section</span>' +
+    '<button type="button" data-ss="" aria-pressed="' + (!sstate.s) + '">All ' + all + '</button>' +
+    SECTIONS.filter(s => counts[s.slug]).map(s => '<button type="button" data-ss="' + s.slug + '" aria-pressed="' + (sstate.s === s.slug) + '">' + esc(s.name) + ' ' + counts[s.slug] + '</button>').join('') + '</div>' : '';
+  if(sstate.sort === 'new') list.sort((a,b) => b.it.issue.id.localeCompare(a.it.issue.id) || a.it.n-b.it.n);
+  if(sstate.sort === 'section'){
+    const ord = {}; SECTIONS.forEach((s,i) => ord[s.slug] = i);
+    list.sort((a,b) => ord[a.it.s]-ord[b.it.s] || b.score-a.score);
+  }
+  cnt.textContent = list.length + (list.length===1 ? ' find' : ' finds') + (sstate.q.trim() ? ' for “' + sstate.q.trim() + '”' : '');
+  if(!list.length){
+    box.innerHTML = '<p>Nothing in the house matches that. Try fewer words, loosen a filter, or <a href="#sections">browse by section</a>.</p>';
+    return;
+  }
+  const re = makeRe(terms);
+  if(sstate.sort === 'section'){
+    let h = '', cur = '';
+    list.forEach(r => {
+      if(r.it.s !== cur){if(cur) h += '</div>'; cur = r.it.s; h += '<h2 class="month">' + esc(secBy[cur].name) + '</h2><div class="grid">';}
+      h += itemHTML(r.it, re, {from:true});
+    });
+    box.innerHTML = h + '</div>';
+  } else {
+    box.innerHTML = gridHTML(list.map(r => r.it), re, false, {from:true});
+  }
+}
+
+/* ---- The Commonplace Book ---- */
+function renderCommonplace(){
+  const mine = ITEMS.filter(it => it.e);
+  let h = '<div class="pagehead"><h1>The Commonplace Book</h1><p>The editor’s own shelf: finds Alison has kept, in her own words wherever she wrote them. They also appear in the daily issues.</p></div>';
+  h += mine.length ? groupedByIssue(mine) : '<p class="notice">The shelf is still empty. The first finds will arrive with the next issue.</p>';
+  view.innerHTML = h;
+}
+/* ---- almanac strip, From Alison slot, Start Here page ---- */
+const ALM_MONTHS = [
+ {s:'Midwinter', k:'Citrus and marmalade oranges, leeks, kale, parsnips, forced rhubarb, winter squash.', g:'Pruning apples and pears on a dry day, ordering seeds, feeding the birds, snowdrops thinking about it.'},
+ {s:'The last of winter', k:'Seville oranges for marmalade, leeks, purple sprouting broccoli, kale, forced rhubarb.', g:'Snowdrops and early crocus, chitting potatoes, sweet peas started indoors.'},
+ {s:'Early spring', k:'Purple sprouting broccoli, spring greens, rhubarb, radishes, the first asparagus in some places.', g:'Daffodils, sowing hardy seeds under cover, tidying beds, hellebores at their best.'},
+ {s:'Spring', k:'Asparagus, new potatoes, rhubarb, radishes, watercress, spring onions.', g:'Blossom, tulips, bluebells in the woods, sowing and planting out once frost has passed.'},
+ {s:'Late spring', k:'Asparagus, strawberries arriving, peas, broad beans, new potatoes, lettuce.', g:'Lilac, peonies about to open, cow parsley, hardening off seedlings, the first roses.'},
+ {s:'Early summer', k:'Strawberries, peas, broad beans, cherries, new potatoes, salad leaves.', g:'Roses, sweet peas, elderflower for cordial, lavender coming on, sitting out until the light goes.'},
+ {s:'High summer', k:'Raspberries, courgettes, tomatoes, runner beans, sweetcorn, gooseberries.', g:'Lavender, sunflowers, dahlias starting, deadheading, picking sweet peas every day to keep them going.'},
+ {s:'Late summer', k:'Plums, blackberries beginning, tomatoes, corn, apples, beans, courgettes in abundance.', g:'Dahlias, hydrangeas, saving seed, jam and chutney, the first hint of autumn in the evenings.'},
+ {s:'Early autumn', k:'Apples, pears, blackberries, plums, squash, sweetcorn, the first chestnuts.', g:'Michaelmas daisies, collecting seed, planting spring bulbs towards the end of the month, harvest suppers.'},
+ {s:'Autumn', k:'Apples, pumpkins and squash, pears, quinces, chestnuts, celeriac, beetroot.', g:'Leaf colour, planting tulip bulbs, lifting tender dahlias, raking leaves for leaf mould.'},
+ {s:'Late autumn', k:'Squash, parsnips, celeriac, leeks, Brussels sprouts, apples, chestnuts, cranberries.', g:'Planting tulips, mulching, cutting back, winter jasmine, the last leaves on the beech.'},
+ {s:'Midwinter coming on', k:'Brussels sprouts, red cabbage, parsnips, clementines, chestnuts, cranberries.', g:'Holly and ivy for the house, amaryllis and paperwhites indoors, feeding the birds, rest.'}
+];
+const ALM_DAYS = [
+ [1,1,'New Year’s Day'],[1,5,'Twelfth Night'],[1,6,'Epiphany'],[1,25,'Burns Night, Scotland'],[2,2,'Candlemas, and Groundhog Day in the USA'],
+ [2,14,'St Valentine’s Day'],[3,1,'St David’s Day, Wales'],[3,17,'St Patrick’s Day'],[3,20,'around now, the spring equinox'],[3,25,'Lady Day, an old quarter day'],
+ [4,23,'St George’s Day, England, and Shakespeare’s traditional birthday'],[5,1,'May Day'],[6,21,'around now, the summer solstice'],[6,24,'Midsummer Day'],
+ [7,4,'Independence Day, USA'],[8,1,'Lammas, the old loaf-mass harvest festival'],[9,22,'around now, the autumn equinox'],[9,29,'Michaelmas, an old quarter day'],
+ [10,31,'All Hallows’ Eve'],[11,1,'All Saints’ Day'],[11,2,'All Souls’ Day'],[11,5,'Bonfire Night, UK'],[11,11,'Armistice and Remembrance Day, and Veterans Day in the USA'],
+ [11,30,'St Andrew’s Day, Scotland'],[12,21,'around now, the winter solstice'],[12,24,'Christmas Eve'],[12,25,'Christmas Day'],[12,26,'Boxing Day, and St Stephen’s Day'],[12,31,'Hogmanay and New Year’s Eve']
+];
+function nthWeekday(y, m, wd, n){const d = new Date(y, m, 1); const add = (wd - d.getDay() + 7) % 7; return 1 + add + 7 * (n - 1);}
+function almDaysFor(year){
+  const l = ALM_DAYS.map(x => ({m:x[0], d:x[1], t:x[2]}));
+  l.push({m:5, d:nthWeekday(year, 4, 0, 2), t:'Mother’s Day, USA'});
+  l.push({m:6, d:nthWeekday(year, 5, 0, 3), t:'Father’s Day, UK and USA'});
+  l.push({m:11, d:nthWeekday(year, 10, 4, 4), t:'Thanksgiving, USA'});
+  return l;
+}
+function moonPhase(date){
+  const syn = 29.530588853, ref = Date.UTC(2000, 0, 6, 18, 14);
+  const age = (((date.getTime() - ref) / 86400000) % syn + syn) % syn;
+  const names = ['a new moon','a waxing crescent','a first-quarter moon','a waxing gibbous moon','a full moon','a waning gibbous moon','a last-quarter moon','a waning crescent'];
+  const idx = Math.floor((age / syn) * 8 + 0.5) % 8;
+  return names[idx];
+}
+function almanacHTML(){
+  const now = new Date(), y = now.getFullYear(), mo = now.getMonth();
+  const A = ALM_MONTHS[mo];
+  const today0 = new Date(y, mo, now.getDate());
+  const soon = [];
+  [y, y + 1].forEach(yr => almDaysFor(yr).forEach(x => {
+    const d = new Date(yr, x.m - 1, x.d), diff = Math.round((d - today0) / 86400000);
+    if(diff >= 0 && diff <= 10) soon.push({diff:diff, t:x.t, d:d});
+  }));
+  soon.sort((a, b) => a.diff - b.diff);
+  const dayLine = soon.length ? soon.slice(0, 3).map(x => (x.diff === 0 ? 'Today: ' : x.diff === 1 ? 'Tomorrow: ' : x.d.toLocaleDateString('en-GB', {day:'numeric', month:'long'}) + ': ') + esc(x.t)).join('<br>') : 'A quiet stretch of the calendar. Nothing marked, which leaves more room for your own days.';
+  return '<aside class="almanac" aria-label="The almanac"><p class="am-head">' + esc(A.s) + ', with ' + esc(moonPhase(now)) + ' in the sky.</p>' +
+    '<div><p class="label">On the calendar</p><p>' + dayLine + '</p></div>' +
+    '<div><p class="label">In the kitchen</p><p>' + esc(A.k) + '</p></div>' +
+    '<div><p class="label">In the garden</p><p>' + esc(A.g) + '</p></div></aside>';
+}
+function fromAlisonHTML(){
+  const a = DATA.alison;
+  if(!a || !a.line) return '';
+  return '<p class="fromalison"><span>From Alison</span>' + esc(a.line) + (a.u ? ' <a href="' + esc(safeUrl(a.u)) + '" target="_blank" rel="noopener noreferrer">' + esc(a.lt || 'Read more') + '</a>' : '') + '</p>';
+}
+function renderStart(){
+  view.innerHTML = '<div class="start">' + pagehead('Start Here', 'A short tour of the house, for new arrivals.') +
+   '<h2>What this is</h2><p>The Sourcebook is the daily companion to Alison’s monthly Gazette: a fresh handful of things to read, watch, hear, visit and wonder at, gathered every morning from Britain, America and further afield. Housekeeping, sanctuary, midlife, books, film, gardens, curiosities and a good deal of tea.</p>' +
+   '<h2>How a morning goes</h2><p>Today’s issue opens with the day itself (any holiday, saint or folk custom that belongs to it), a letter, a Small Wonder, and a reading trail if you’d like to follow one thread through the house. Below that are the finds, sorted into rooms. Take what you fancy. There isn’t a wrong door.</p>' +
+   '<h2>Finding things</h2><ul><li>Press <b>/</b> or use the search box to look across every issue. It forgives typos.</li><li><b>Sections</b> are the rooms of the house. <b>Tags</b> are the threads running between them.</li><li>The <b>Archive</b> keeps every back issue. <b>This week</b> is a quick catch-up if you’ve missed a few days.</li><li><b>Surprise me</b> hands you one find from the whole house.</li></ul>' +
+   '<h2>Near or far</h2><p>On the front page you can choose to read from Everywhere, the UK, the USA or Further afield. Every find shows where it comes from.</p>' +
+   '<h2>Keeping things</h2><p>Press <b>Save</b> on anything you like and it waits on <b>My shelf</b>. It’s kept on the device you’re using, so it won’t follow you to your phone. You can press <b>Copy my shelf as a list</b> and paste the list into your notes or an email.</p>' +
+   '<h2>Comfort</h2><p>The A− and A+ buttons change the size of the text, and the half-moon button switches between light and dark.</p>' +
+   '<h2>About the links</h2><p>Every link is opened and checked by hand before it goes in, and each should take you to a page that is free to read. Websites move, though. If one has wandered off, tell Alison and it will be replaced.</p></div>';
+}
+
+/* ---- sticky strip and back-to-top ---- */
+function buildJump(){
+  if(curPresent && curPresent.length && (route === 'today' || route === 'issue')){
+    jb.innerHTML = '<ul>' + curPresent.map(s => '<li><button type="button" data-jump="' + s.slug + '">' + esc(s.name) + '</button></li>').join('') + '</ul>';
+    jb.dataset.on = '1';
+  } else {jb.innerHTML = ''; jb.dataset.on = '';}
+  onScroll();
+}
+function onScroll(){
+  const y = window.scrollY || document.documentElement.scrollTop || 0;
+  jb.hidden = !(jb.dataset.on && y > 700);
+  tt.hidden = y < 900;
+}
+
+/* router */
+function setActive(r){
+  document.querySelectorAll('.nav a').forEach(a => {
+    if(a.dataset.r === r) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+}
+function reduced(){return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
+function go(opt){
+  opt = opt || {};
+  const h = decodeURIComponent(location.hash.slice(1));
+  let r = 'today';
+  if(h === 'archive' || h === 'sections' || h === 'tags' || h === 'search' || h === 'week' || h === 'shelf' || h === 'surprise' || h === 'commonplace' || h === 'start') r = h;
+  else if(h.indexOf('issue-') === 0) r = 'issue';
+  else if(h.indexOf('section-') === 0) r = 'section';
+  else if(h.indexOf('tag-') === 0) r = 'tag';
+  else if(h.indexOf('find-') === 0) r = 'find';
+  route = r;
+  curPresent = null;
+  if(r !== 'search' && qEl.value){qEl.value = ''; sstate.q = '';}
+  if(r === 'today') renderToday();
+  else if(r === 'archive') renderArchive();
+  else if(r === 'week') renderWeek();
+  else if(r === 'sections') renderSections();
+  else if(r === 'tags') renderTags();
+  else if(r === 'issue') renderIssue(h.slice(6));
+  else if(r === 'section') renderSection(h.slice(8));
+  else if(r === 'tag') renderTag(h.slice(4));
+  else if(r === 'find') renderFind(h.slice(5));
+  else if(r === 'shelf') renderShelf();
+  else if(r === 'surprise') renderSurprise();
+  else if(r === 'search') renderSearch();
+  else if(r === 'commonplace') renderCommonplace();
+  else if(r === 'start') renderStart();
+  setActive({today:'today', issue:'archive', archive:'archive', week:'week', sections:'sections', section:'sections', tags:'tags', tag:'tags', shelf:'shelf', surprise:'surprise', find:'archive', commonplace:'commonplace', start:'start'}[r] || '');
+  buildJump();
+  if(!opt.keep){
+    window.scrollTo(0, 0);
+    const hd = view.querySelector('h1');
+    document.getElementById('announce').textContent = hd ? hd.textContent : '';
+    if(booted && hd){hd.setAttribute('tabindex', '-1'); hd.focus({preventScroll:true});}
+  }
+  booted = true;
+}
+
+/* events */
+let timer = null;
+qEl.addEventListener('input', () => {
+  sstate.q = qEl.value;
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    if(route !== 'search'){
+      if(!sstate.q.trim()) return;
+      location.hash = '#search';
+    } else updateResults();
+  }, 140);
+});
+document.getElementById('find').addEventListener('submit', e => {
+  e.preventDefault();
+  if(route !== 'search') location.hash = '#search'; else updateResults();
+});
+qEl.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){qEl.value = ''; sstate.q = ''; if(route === 'search') updateResults(); qEl.blur();}
+});
+document.addEventListener('keydown', e => {
+  const t = e.target.tagName;
+  if(e.key === '/' && t !== 'INPUT' && t !== 'SELECT' && t !== 'TEXTAREA'){e.preventDefault(); qEl.focus();}
+});
+
+function jumpTo(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior: reduced() ? 'auto' : 'smooth', block:'start'});
+}
+function toggleSave(id){
+  const i = shelf.indexOf(id);
+  if(i > -1) shelf.splice(i, 1); else shelf.push(id);
+  sset('bh-shelf', JSON.stringify(shelf));
+  syncShelf();
+  const on = isSaved(id);
+  document.querySelectorAll('[data-save]').forEach(b => {
+    if(b.dataset.save === id){b.setAttribute('aria-pressed', on); b.querySelector('.lbl').textContent = on ? 'Saved' : 'Save';}
+  });
+  if(route === 'shelf') go({keep:true});
+}
+function share(btn){
+  const id = btn.dataset.share;
+  const url = location.href.split('#')[0] + '#find-' + id;
+  const lbl = btn.querySelector('.lbl');
+  const done = () => {lbl.textContent = 'Link copied'; setTimeout(() => {lbl.textContent = 'Share';}, 2400);};
+  const fallback = () => {
+    const art = btn.closest('.item');
+    let inp = art.querySelector('.sharein');
+    if(!inp){inp = document.createElement('input'); inp.className = 'sharein'; inp.readOnly = true; inp.setAttribute('aria-label', 'Link to this find'); art.appendChild(inp);}
+    inp.value = url; inp.focus(); inp.select();
+  };
+  try{navigator.clipboard.writeText(url).then(done, fallback);}catch(e){fallback();}
+}
+view.addEventListener('click', e => {
+  const j = e.target.closest('[data-jump]');
+  if(j){jumpTo('sec-' + j.dataset.jump); return;}
+  const g = e.target.closest('[data-goto]');
+  if(g){jumpTo('find-' + g.dataset.goto); return;}
+  const f = e.target.closest('[data-f]');
+  if(f){
+    const k = f.dataset.f, v = f.dataset.v;
+    if(k === 'free') state.free = !state.free;
+    else if(k === 'k') state.k = state.k === v ? '' : v;
+    else state[k] = v;
+    go({keep:true});
+    const again = view.querySelector('[data-f="' + k + '"][data-v="' + v + '"]');
+    if(again) again.focus({preventScroll:true});
+    return;
+  }
+  if(e.target.closest('[data-copyshelf]')){copyShelf(); return;}
+  const sv = e.target.closest('[data-save]');
+  if(sv){toggleSave(sv.dataset.save); return;}
+  const sh = e.target.closest('[data-share]');
+  if(sh){share(sh); return;}
+  const ss = e.target.closest('[data-ss]');
+  if(ss){sstate.s = ss.dataset.ss; updateResults(); return;}
+  if(e.target.closest('[data-again]')){go(); return;}
+  const q = e.target.closest('[data-q]');
+  if(q){qEl.value = q.dataset.q; sstate.q = q.dataset.q; updateResults();}
+});
+jb.addEventListener('click', e => {const j = e.target.closest('[data-jump]'); if(j) jumpTo('sec-' + j.dataset.jump);});
+tt.addEventListener('click', () => {window.scrollTo({top:0, behavior: reduced() ? 'auto' : 'smooth'});});
+document.querySelector('.nav').addEventListener('click', e => {
+  const a = e.target.closest('a');
+  if(a && a.getAttribute('href') === '#surprise' && location.hash === '#surprise'){e.preventDefault(); go();}
+});
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* reading comfort */
+document.getElementById('sz-down').addEventListener('click', () => {sizeI = Math.max(0, sizeI - 1); sset('bh-size', SIZES[sizeI]); applySize();});
+document.getElementById('sz-up').addEventListener('click', () => {sizeI = Math.min(SIZES.length - 1, sizeI + 1); sset('bh-size', SIZES[sizeI]); applySize();});
+document.getElementById('theme').addEventListener('click', () => {
+  const cur = root.getAttribute('data-theme');
+  const dark = cur ? cur === 'dark' : !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const next = dark ? 'light' : 'dark';
+  root.setAttribute('data-theme', next); sset('bh-theme', next);
+});
+
+window.addEventListener('hashchange', () => go());
+document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+syncShelf();
+go();
+})();
+</script>
+
+</body></html>
